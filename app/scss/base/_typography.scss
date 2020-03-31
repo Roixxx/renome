@@ -1,3 +1,15 @@
 // Font imports and variables
 
-$primary-font: 'Arial', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@font-face {
+    font-family: 'Axis';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Axis'), url('fonts/axis.woff') format('woff');
+}
+
+$primary-font: 'Monsterrat', sans-serif;
+$secondary-font: 'Axis', sans-serif;
+$tertiary-font: 'Pacifico', sans-serif;
