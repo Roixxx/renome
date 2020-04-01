@@ -8,15 +8,30 @@
   box-sizing: border-box;
 }
 
-html,
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
+    color: $primary-color;
+    background-color: $white-color;
+    font-family: $primary-font;
+    font-weight: $font-regular;
+    line-height: 1.45;
+    min-width: 320px;
+    overflow-x: hidden;
+	margin: 0;
 }
 
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+p {margin: 0;}
+h1,h2,h3 {margin: 0;}
+ul {margin: 0; padding: 0;}
+li {list-style: none;}
+
 .container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
+	max-width: 1210px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
 }

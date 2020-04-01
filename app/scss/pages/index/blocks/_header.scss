@@ -1,0 +1,12 @@
+.menu {
+    height: 100px;
+
+    &__title {
+
+        color: $secondary-color;
+        font-family: $tertiary-font;
+        font-size: 25px;
+        font-weight: $font-regular;
+        letter-spacing: 2.5px;
+    }
+}
