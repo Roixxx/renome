@@ -24,11 +24,14 @@ const paths = {
     dest: './build/assets/css'
   },
   scripts: {
-    src: './app/js/**/*.js',
+    src: './app/js/*.js',
     dest: './build/assets/js'
   },
   vendors: {
-    src: './app/js/vendors/**/*.js',
+    src: [
+      './app/js/vendors/**/*.js',
+      'node_modules/slick-carousel/slick/slick.js'
+    ],
     dest: './build/assets/js'
   },
   images: {
