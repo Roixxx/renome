@@ -1,7 +1,10 @@
-@import './abstracts/all';
-@import './base/all';
-@import './pages/all';
 
-p {
-    font-family: 'Pacifico';
-}
+
+@import './abstracts/functions';
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+@import './base/base';
+@import './base/typography';
+
+@import './pages/index/index';
