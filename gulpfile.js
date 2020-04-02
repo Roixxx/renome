@@ -23,13 +23,19 @@ const paths = {
     src: './app/scss/**/*.scss',
     dest: './build/assets/css'
   },
+  csslibs: {
+    src: [
+        './node_modules/slick-carousel/slick/slick.css',
+      ],
+    dest: './app/scss/base'
+  },
   scripts: {
     src: './app/js/*.js',
     dest: './build/assets/js'
   },
-  vendors: {
+  jslibs: {
     src: [
-      './app/js/vendors/**/*.js',
+      './app/js/jslibs/**/*.js',
       'node_modules/slick-carousel/slick/slick.js'
     ],
     dest: './build/assets/js'
@@ -85,6 +91,12 @@ const styles = () =>
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
 
+const csslibs = () => 
+  gulp
+    .src(paths.csslibs.src)
+    .pipe(concat('_csslibs.scss'))
+    .pipe(gulp.dest(paths.csslibs.dest));
+
 // Minify all javascript files and concat them into a single app.min.js
 const scripts = () =>
   gulp
@@ -101,10 +113,10 @@ const scripts = () =>
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.scripts.dest));
 
-// Minify all javascript vendors/libs and concat them into a single vendors.min.js
-const vendors = () =>
+// Minify all javascript libs and concat them into a single jslibs.min.js
+const jslibs = () =>
   gulp
-    .src(paths.vendors.src)
+    .src(paths.jslibs.src)
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(
@@ -113,9 +125,9 @@ const vendors = () =>
       })
     )
     .pipe(terser())
-    .pipe(concat('vendors.min.js'))
+    .pipe(concat('jslibs.min.js'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.vendors.dest));
+    .pipe(gulp.dest(paths.jslibs.dest));
 
 // Copy and minify images
 const images = () =>
@@ -149,7 +161,7 @@ function watchFiles() {
   });
 
   gulp.watch(paths.styles.src, styles);
-  gulp.watch(paths.vendors.src, vendors).on('change', browserSync.reload);
+  gulp.watch(paths.jslibs.src, jslibs).on('change', browserSync.reload);
   gulp.watch(paths.favicon.src, favicon).on('change', browserSync.reload);
   gulp.watch(paths.fonts.src, fonts).on('change', browserSync.reload);
   gulp.watch(paths.scripts.src, scripts).on('change', browserSync.reload);
@@ -159,7 +171,7 @@ function watchFiles() {
 
 const build = gulp.series(
   clean,
-  gulp.parallel(styles, vendors, scripts, images, favicon, fonts),
+  gulp.parallel(styles, csslibs, jslibs, scripts, images, favicon, fonts),
   cacheBust
 );
 
@@ -167,8 +179,9 @@ const watch = gulp.series(build, watchFiles);
 
 exports.clean = clean;
 exports.styles = styles;
+exports.csslibs = csslibs;
 exports.scripts = scripts;
-exports.vendors = vendors;
+exports.jslibs = jslibs;
 exports.images = images;
 exports.favicon = favicon;
 exports.fonts = fonts;
