@@ -30,8 +30,29 @@ ul {margin: 0; padding: 0;}
 li {list-style: none;}
 
 .container {
-	max-width: 1210px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 15px;
+    max-width: 1210px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.slick-arrow {
+	width: 55px;
+	height: 55px;
+	border: 2px solid $white-color;
+	background-color: transparent;
+	outline: none;
+	font-size: 0;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+.slick-prev {
+    background-image: url('/assets/images/index/icons/arrow-left.svg');
+}
+
+.slick-next {
+    background-image: url('/assets/images/index/icons/arrow-right.svg');
 }
