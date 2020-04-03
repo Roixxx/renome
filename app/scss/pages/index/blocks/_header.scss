@@ -89,6 +89,10 @@
 
     &__promo {
         position: absolute;
+        bottom: 100px;
+        right: 17%;
+
+        margin: 0px 5px;
         color: $white-color;
         font-family: $secondary-font;
         font-size: 50px;
@@ -103,20 +107,27 @@
             font-weight: $font-bold;
             letter-spacing: 3px;
         }
+
+        @include media((
+            right: (tabletWide: 2%, tablet: 3%, phone: 1%),
+            font-size: (tablet: 30px),
+            bottom: (tablet: 180px),
+        ));
     }
 
     .slick-arrow {
         position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .slick-prev {
-        left: calc(20%);
+        left: 20%;
+        bottom: 120px;
+        
+        @include media((
+            left: (tabletWide: 15%, tablet: 10%, phoneWide: 5%)
+        ));
     }
 
     .slick-next {
-        left: calc(20% + 70px);
+        margin-left: 70px !important;
+        padding-left: 0 !important;
     }
 }
 
