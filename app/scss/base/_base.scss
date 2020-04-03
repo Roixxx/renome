@@ -56,3 +56,54 @@ li {list-style: none;}
 .slick-next {
     background-image: url('/assets/images/index/icons/arrow-right.svg');
 }
+
+/* STYLES FOR SECTIONS */
+/* STYLES FOR SECTIONS */
+/* STYLES FOR SECTIONS */
+
+.section-content-holder {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-text-side-holder {
+    display: flex;
+    flex-direction: column;
+    max-width: 330px;
+    width: 100%;
+}
+
+.section-images-side-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 50px;
+    font-weight: $font-regular;
+    letter-spacing: 10px;
+}
+
+.section-title-small {
+    color: #985e5b;
+    font-family: $primary-font;
+    font-size: 12px;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.section-text {
+    color: $paragraph-color;
+    font-family: $primary-font;
+    font-size: 12px;
+    font-weight: $font-regular;
+    line-height: 30px;
+    letter-spacing: 1.8px;
+}
