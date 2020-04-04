@@ -63,7 +63,7 @@ li {list-style: none;}
 
 .section-content-holder {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 100px 0;
     max-width: 1000px;
     width: 100%;
@@ -73,7 +73,7 @@ li {list-style: none;}
 .section-text-side-holder {
     display: flex;
     flex-direction: column;
-    max-width: 330px;
+    max-width: 332px;
     width: 100%;
 }
 
@@ -88,6 +88,9 @@ li {list-style: none;}
     font-size: 50px;
     font-weight: $font-regular;
     letter-spacing: 10px;
+    margin-top: 40px;
+    margin-left: -2px;
+    line-height: 1.25;
 }
 
 .section-title-small {
@@ -106,4 +109,6 @@ li {list-style: none;}
     font-weight: $font-regular;
     line-height: 30px;
     letter-spacing: 1.8px;
+    margin-top: 13px;
+    
 }

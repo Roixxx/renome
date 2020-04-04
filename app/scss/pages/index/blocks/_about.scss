@@ -1,6 +1,17 @@
 .about {
     img:last-child {
-
         transform: translate(-47px, -65px);
+    }
+
+    .section-text-side-holder {
+        margin-left: 100px;
+        @include media((
+        margin-left: (tabletWide: 50px, tablet: 25px, phone: 0px),
+
+        ));
+    }
+
+    .section-text:last-child {
+        margin-top: 30px;
     }
 }
