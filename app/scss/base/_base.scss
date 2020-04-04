@@ -68,6 +68,9 @@ li {list-style: none;}
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
+    @include media ((
+        padding-top: (phone: 30px)
+    ));
 }
 
 .section-text-side-holder {
@@ -82,6 +85,11 @@ li {list-style: none;}
     flex-direction: column;
 }
 
+.section-img {
+    display: block;
+    width: 100%;
+}
+
 .section-title {
     color: $primary-color;
     font-family: $secondary-font;
@@ -91,6 +99,9 @@ li {list-style: none;}
     margin-top: 40px;
     margin-left: -2px;
     line-height: 1.25;
+    @include media((
+        margin-top: (tablet: 0)
+    ));
 }
 
 .section-title-small {

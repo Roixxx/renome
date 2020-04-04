@@ -1,0 +1,19 @@
+.section-lunch {
+    background-color: #f7f7f7;
+    padding: 100px auto;
+}
+
+.lunch-slider {
+    &__btn {
+        
+    }
+}
+
+.lunch-slider-track {
+    display: flex;
+}
+
+.lunch-slider-track__item img {
+    width: 600px;
+    height: 400px;
+}
