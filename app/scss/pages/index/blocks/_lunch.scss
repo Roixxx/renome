@@ -1,19 +1,76 @@
 .section-lunch {
     background-color: #f7f7f7;
-    padding: 100px auto;
+    padding: 100px 0;
+
+    //del
+    height: 800px;
+    overflow: hidden;
 }
 
 .lunch-slider {
     &__btn {
-        
+
     }
 }
 
 .lunch-slider-track {
     display: flex;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    //del
+    height: 450px;
 }
 
-.lunch-slider-track__item img {
-    width: 600px;
-    height: 400px;
+.lunch-slider-track__item {
+
+    position: absolute;
+
+    img {
+        width: 600px;
+        height: 400px;
+    }
+
+    &-name {
+        color: $primary-color;
+        font-family: $primary-font;
+        font-size: 15px;
+        font-weight: $font-bold;
+        letter-spacing: 0.75px;
+    }
+
+    &-day {
+        color: #dcdee0;
+        font-family: $primary-font;
+        font-size: 20px;
+        font-weight: $font-bold;
+        letter-spacing: 2px;
+        font-style: italic;
+    }
+
+    &-price {
+        width: 100px;
+        height: 50px;
+        position: absolute;
+        top: 30px;
+        right: 35px;
+        background-color: #edeff2;
+        color: $primary-color;
+        font-family: $primary-font;
+        font-size: 17px;
+        font-weight: $font-medium;
+        letter-spacing: 1.7px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.lunch-info-holder {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
 }
