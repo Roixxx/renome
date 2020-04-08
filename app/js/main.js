@@ -92,8 +92,13 @@ function lunchSlider() {
     });
 
     sliderPrevBtn.addEventListener('click', () => {
-        
+        positionsArr.push(positionsArr[0]);
+        positionsArr.shift();
 
+        for (let i = 0; i < slidesList.length; i++) {
+            slidesList[i].setAttribute('data-slide-index', positionsArr[i]);
+        }
+        doSlide();
     });
 
 
