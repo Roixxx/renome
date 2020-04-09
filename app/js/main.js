@@ -18,14 +18,14 @@ function lunchSlider() {
 
     var sliderTrack = document.getElementById('lunch-slider-track');
     var slidesList = sliderTrack.children;
-
+    var sliderNextBtn = document.querySelector('.lunch-slider__btn--next');
+    var sliderPrevBtn = document.querySelector('.lunch-slider__btn--prev')
 
     function setIndex() {
         for(var i = 0; i < slidesList.length; i++) {
             slidesList[i].setAttribute('data-slide-index', i);
         }
-    }
-    setIndex();
+    }setIndex();
 
 
 
@@ -74,34 +74,28 @@ function lunchSlider() {
         });
     }doSlide();
 
-    var sliderNextBtn = document.querySelector('.lunch-slider__btn--next');
-    var sliderPrevBtn = document.querySelector('.lunch-slider__btn--prev')
+
 
     var positionsArr = [0, 1, 2, 3]
 
     sliderNextBtn.addEventListener('click', () => {
-    
         positionsArr.unshift(positionsArr[positionsArr.length - 1]);
         positionsArr.pop();
-        
-        for (let i = 0; i < slidesList.length; i++) {
-            slidesList[i].setAttribute('data-slide-index', positionsArr[i]);
-        }
-
-        doSlide();
+        setPositions();
     });
 
     sliderPrevBtn.addEventListener('click', () => {
         positionsArr.push(positionsArr[0]);
         positionsArr.shift();
+        setPositions();
+    });
 
+    function setPositions() {
         for (let i = 0; i < slidesList.length; i++) {
             slidesList[i].setAttribute('data-slide-index', positionsArr[i]);
         }
         doSlide();
-    });
-
-
+    }
 }
 
 lunchSlider();

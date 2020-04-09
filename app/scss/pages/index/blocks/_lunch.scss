@@ -13,7 +13,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 70px 0px 70px;
+    margin: 0px 90px 0px 70px;
+
+    @include media((
+        margin: (1145: 0px 60px 0px 40px)
+    ));
 
     .section-title {
         margin: 0;
@@ -26,11 +30,12 @@
     position: relative;
     top: 0;
     left: 0;
+
 }
 
 .lunch-slider-track {
     display: flex;
-
+    position: relative;
     align-items: center;
     min-height: 400px;
     height: 100%;
