@@ -11,33 +11,20 @@ $(document).ready(function(){
 
 // LUNCH SLIDER \/
 
-
-
-
 function lunchSlider() {
 
-    var sliderTrack = document.getElementById('lunch-slider-track');
-    var slidesList = sliderTrack.children;
+    var slidesList = document.getElementById('lunch-slider-track').children;
     var sliderNextBtn = document.querySelector('.lunch-slider__btn--next');
     var sliderPrevBtn = document.querySelector('.lunch-slider__btn--prev')
-
-
-    function setIndex() {
-        for(var i = 0; i < slidesList.length; i++) {
-            slidesList[i].setAttribute('data-slide-index', i);
-        }
-    }setIndex();
-
-
 
     function doSlide() {
         var slidesArr = Array.from(slidesList).sort(function (a, b) {
             return a.dataset.slideIndex - b.dataset.slideIndex;
-        });
-        var width = 600;
-        var height = 400;
-        var opacity = 1;
-        var transform = 0;
+        }),
+        width = 600,
+        height = 400,
+        opacity = 1,
+        transform = 0;
 
         slidesArr.forEach((slide, i) => {
 
@@ -56,13 +43,12 @@ function lunchSlider() {
             slide.style.opacity = opacity;
             slide.style.zIndex = 10 - i;
             slide.style.transform = `translateX(${transform}px)`;
-
         });
-    }doSlide();
+    }
 
 
+    var positionsArr = Array.from({ length: slidesList.length }, (v, i) => i);
 
-    var positionsArr = [0, 1, 2, 3]
 
     sliderNextBtn.addEventListener('click', () => {
         positionsArr.unshift(positionsArr[positionsArr.length - 1]);
@@ -81,7 +67,7 @@ function lunchSlider() {
             slidesList[i].setAttribute('data-slide-index', positionsArr[i]);
         }
         doSlide();
-    }
+    }setPositions()
 }
 
 lunchSlider();
