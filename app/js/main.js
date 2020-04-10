@@ -5,7 +5,7 @@ $(document).ready(function(){
         slidesToScroll: 1,
         fade: true,
         dots: false,
-        rows: 0
+        rows: 0,
     });
 });
 
