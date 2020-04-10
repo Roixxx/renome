@@ -31,10 +31,15 @@ function lunchSlider() {
 
 
     function doSlide() {
-        Array.from(slidesList).forEach(slide => {
-            var slideIndex = slide.dataset.slideIndex;
+        var slidesArr = Array.from(slidesList).sort(function (a, b) {
+            return a.dataset.slideIndex - b.dataset.slideIndex;
+        });
 
+
+        slidesArr.forEach(slide => {
+            var slideIndex = slide.dataset.slideIndex;
             slide.classList.remove('current-slide');
+
 
             switch (slideIndex) {
                 case '0':
