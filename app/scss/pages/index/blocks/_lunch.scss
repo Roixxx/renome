@@ -44,6 +44,7 @@
 .lunch-slider-track__item {
 
     position: absolute;
+    transition: transform 0.3s;
 
     img {
         width: 600px;
@@ -94,6 +95,7 @@
     position: absolute;
     width: 100%;
 }
+
 
 .current-slide .lunch-info-holder {
     display: flex;
