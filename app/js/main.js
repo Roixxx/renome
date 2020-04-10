@@ -21,6 +21,7 @@ function lunchSlider() {
     var sliderNextBtn = document.querySelector('.lunch-slider__btn--next');
     var sliderPrevBtn = document.querySelector('.lunch-slider__btn--prev')
 
+
     function setIndex() {
         for(var i = 0; i < slidesList.length; i++) {
             slidesList[i].setAttribute('data-slide-index', i);
@@ -29,53 +30,33 @@ function lunchSlider() {
 
 
 
-
     function doSlide() {
         var slidesArr = Array.from(slidesList).sort(function (a, b) {
             return a.dataset.slideIndex - b.dataset.slideIndex;
         });
+        var width = 600;
+        var height = 400;
+        var opacity = 1;
+        var transform = 0;
 
+        slidesArr.forEach((slide, i) => {
 
-        slidesArr.forEach(slide => {
-            var slideIndex = slide.dataset.slideIndex;
-            slide.classList.remove('current-slide');
-
-
-            switch (slideIndex) {
-                case '0':
-                    slide.style.zIndex = 4;
-                    slide.style.transform = 'translateX(0)';
-                    slide.getElementsByTagName('img')[0].style.width = '600px';
-                    slide.getElementsByTagName('img')[0].style.height = '400px';
-                    slide.style.opacity = '1';
-                    slide.classList.add('current-slide');
-                    break;
-                case '1':
-                    slide.style.zIndex = 3;
-                    slide.style.transform = 'translateX(90px)';
-                    slide.getElementsByTagName('img')[0].style.width = '560px';
-                    slide.getElementsByTagName('img')[0].style.height = '373px';
-                    slide.style.opacity = '0.7';
-                    break;
-                case '2':
-                    slide.style.zIndex = 2;
-                    slide.style.transform = 'translateX(170px)';
-                    slide.getElementsByTagName('img')[0].style.width = '530px';
-                    slide.getElementsByTagName('img')[0].style.height = '353px';
-                    slide.style.opacity = '0.7';
-                    break;
-                case '3':
-                    slide.style.zIndex = 1;
-                    slide.style.transform = 'translateX(250px)';
-                    slide.getElementsByTagName('img')[0].style.width = '500px';
-                    slide.getElementsByTagName('img')[0].style.height = '333px';
-                    slide.style.opacity = '0.7';
-                    break;
-            
-                default:
-                    break;
+            if (i > 0) {
+                width -= 30;
+                height -= 20;
+                opacity = 0.7;
+                transform += 80;
+                slide.classList.remove('current-slide');
+            } else {
+                slide.classList.add('current-slide');
             }
-            return;
+
+            slide.getElementsByTagName('img')[0].style.width = width + 'px';
+            slide.getElementsByTagName('img')[0].style.height = height + 'px';
+            slide.style.opacity = opacity;
+            slide.style.zIndex = 10 - i;
+            slide.style.transform = `translateX(${transform}px)`;
+
         });
     }doSlide();
 
