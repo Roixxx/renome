@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     margin: 0px 90px 0px 70px;
-    padding-bottom: 25px;
+    padding: 25px 0px;
 
     @include media((
         margin: (1200: 0px 60px 0px 40px)
@@ -28,12 +28,17 @@
 }
 
 .lunch-slider {
-    max-width: 750px;
-    width: 100%;
-    height: 100%;
+
     position: relative;
     top: 0;
     left: 0;
+    padding-right: 150px;
+    padding-left: 28px;
+
+    @include media((
+
+        padding-right: (605: 0px)
+    ));
 
 }
 
@@ -46,13 +51,18 @@
 }
 
 .lunch-slider-track__item {
+    width: 600px;
+    height: 400px;
+    @include media((
+        width: (830: 500px, 720: 400px, phoneWide: 300px),
+        height: (830: 300px, 720: 267px, phoneWide: 200px)
+    ));
 
-    position: absolute;
     transition: transform 0.3s;
 
     img {
-        width: 600px;
-        height: 400px;
+        width: 100%;
+        height: 100%;
         display: block;
     }
 
@@ -90,6 +100,11 @@
         text-align: center;
         align-items: center;
         justify-content: center;
+        @include media((
+            width: (phoneWide: 60px),
+            height: (phoneWide: 30px),
+            font-size: (phoneWide: 12px)
+        ));
     }
 }
 
@@ -116,15 +131,16 @@
     position: absolute;
     top: 50%;
     left: 0;
+    
 
     &--prev {
         top: 35%;
-        left: -30px;
+        left: 0px;
     }
 
     &--next {
         bottom: 35%;
-        left: -30px;
+        left: 0px;
     }
 }
 
