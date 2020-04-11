@@ -63,6 +63,15 @@ li {list-style: none;}
 /* STYLES FOR SECTIONS */
 /* STYLES FOR SECTIONS */
 
+.section {
+    padding: 100px 0;
+    overflow: hidden;
+    background-color: $white-color;
+    @include media((
+        padding: (phoneWide: 70px 0, phone: 50px 0, smallPhone: 40px 0)
+    ));
+}
+
 .section-content-holder {
     display: flex;
     justify-content: center;

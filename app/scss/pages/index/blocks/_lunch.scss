@@ -1,7 +1,7 @@
 .section-lunch {
     background-color: #f7f7f7;
-    padding: 100px 0;
     overflow: hidden;
+    padding-bottom: 110px;
 
     .container {
         display: flex;
@@ -15,11 +15,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0px 90px 0px 70px;
+    margin: 0px 90px 0px 0px;
     padding: 25px 0px;
 
     @include media((
-        margin: (1200: 0px 60px 0px 40px)
+        margin: (1200: 0px 60px 0px 40px, tablet: 0px)
     ));
 
     .section-title {
@@ -33,7 +33,7 @@
     top: 0;
     left: 0;
     padding-right: 150px;
-    padding-left: 28px;
+
 
     @include media((
 
@@ -48,14 +48,18 @@
     align-items: center;
     min-height: 400px;
     height: 100%;
+    @include media((
+
+        min-height: (phoneWide: 275px)
+    ));
 }
 
 .lunch-slider-track__item {
     width: 600px;
     height: 400px;
     @include media((
-        width: (830: 500px, 720: 400px, phoneWide: 300px),
-        height: (830: 300px, 720: 267px, phoneWide: 200px)
+        width: (830: 500px, 720: 400px, phoneWide: 300px, 375: 260px),
+        height: (830: 300px, 720: 267px, phoneWide: 200px, 375: 160px)
     ));
 
     transition: transform 0.3s;
@@ -129,18 +133,26 @@
     background-color: #edeff2;
     border: 2px solid #edeff2;
     position: absolute;
-    top: 50%;
-    left: 0;
-    
+
+    @include media((
+        width: (phoneWide: 40px),
+        height: (phoneWide: 40px)
+    ));
 
     &--prev {
         top: 35%;
-        left: 0px;
+        left: -28px;
+        @include media((
+            left: (phoneWide: -22px)
+        ));
     }
 
     &--next {
         bottom: 35%;
-        left: 0px;
+        left: -28px;
+         @include media((
+            left: (phoneWide: -22px)
+        ));
     }
 }
 
