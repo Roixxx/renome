@@ -65,7 +65,7 @@ li {list-style: none;}
 
 .section {
     padding: 100px 0;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: $white-color;
     @include media((
         padding: (phoneWide: 70px 0, phone: 50px 0, smallPhone: 40px 0)
