@@ -75,13 +75,10 @@ li {list-style: none;}
 .section-content-holder {
     display: flex;
     justify-content: center;
-    padding: 100px 0;
+
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
-    @include media ((
-        padding-top: (phone: 30px)
-    ));
 }
 
 .section-text-side-holder {
@@ -94,10 +91,12 @@ li {list-style: none;}
 .section-images-side-holder {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .section-img {
     display: block;
+    max-width: 450px;
     width: 100%;
 }
 
