@@ -74,8 +74,26 @@ function lunchSlider() {
             slidesList[i].setAttribute('data-slide-index', positionsArr[i]);
         }
         doSlide();
-    }setPositions()
+    }setPositions();
 }
 
 lunchSlider();
 
+
+// Animate Scroll \/
+
+function animateScroll() {
+
+
+
+    var animateArr = Array.from( document.querySelectorAll('.animate') );
+
+    animateArr.forEach(element => {
+        element.classList.remove('animate');
+        element.style.visibility = 'hidden';
+    });
+
+    console.log(animateArr);
+}
+
+animateScroll();
