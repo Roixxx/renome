@@ -1,0 +1,57 @@
+.animated {
+    animation-duration: 1s;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.duration-1s {
+  animation-duration: 1s;
+}
+
+.animated.duration-2s {
+  animation-duration: 2s;
+}
+
+.animated.duration-3s {
+  animation-duration: 3s;
+}
+
+.animated.duration-4s {
+  animation-duration: 4s;
+}
+
+.animated.duration-5s {
+  animation-duration: 5s;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 10%, 0);
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+ 
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade {
+    animation-name: fade;
+}
