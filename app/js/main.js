@@ -91,9 +91,26 @@ function animateScroll() {
     animateArr.forEach(element => {
         element.classList.remove('animate');
         element.style.visibility = 'hidden';
+        //console.log(element.offsetTop + element.clientTop);
     });
 
-    console.log(animateArr);
+
+    window.addEventListener("scroll", function() {
+        var scrolled = window.pageYOffset;
+        
+        animateArr.forEach(element => {
+            if (scrolled > element.offsetTop) {
+                console.log(element.offsetTop);
+                console.log(scrolled + 'scrolled');
+                element.classList.add('animate');
+                element.style.visibility = 'visible';
+            };
+        });
+    });
+
+
+ 
 }
 
 animateScroll();
+
