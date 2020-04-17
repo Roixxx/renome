@@ -1,28 +1,26 @@
-.animated {
-    animation-duration: 1s;
-}
-
-.animated.infinite {
-  animation-iteration-count: infinite;
-}
-
-.animated.duration-1s {
+.animate {
   animation-duration: 1s;
 }
 
-.animated.duration-2s {
+
+
+.animate.duration-1s {
+  animation-duration: 1s;
+}
+
+.animate.duration-2s {
   animation-duration: 2s;
 }
 
-.animated.duration-3s {
+.animate.duration-3s {
   animation-duration: 3s;
 }
 
-.animated.duration-4s {
+.animate.duration-4s {
   animation-duration: 4s;
 }
 
-.animated.duration-5s {
+.animate.duration-5s {
   animation-duration: 5s;
 }
 

@@ -85,31 +85,25 @@ lunchSlider();
 function animateScroll() {
 
 
-
     var animateArr = Array.from( document.querySelectorAll('.animate') );
 
     animateArr.forEach(element => {
-        element.classList.remove('animate');
+        element.style.animationPlayState = 'paused';
         element.style.visibility = 'hidden';
-        //console.log(element.offsetTop + element.clientTop);
     });
 
-
-    window.addEventListener("scroll", function() {
-        var scrolled = window.pageYOffset;
-        
+    function doAnimate() {
+        var scrolled = window.pageYOffset + document.documentElement.clientHeight;
+        console.log('вызвана функция');
         animateArr.forEach(element => {
-            if (scrolled > element.offsetTop) {
-                console.log(element.offsetTop);
-                console.log(scrolled + 'scrolled');
-                element.classList.add('animate');
+            if (scrolled - 300> element.offsetTop) {
                 element.style.visibility = 'visible';
+                element.style.animationPlayState = 'running';
             };
         });
-    });
+    }
 
-
- 
+    window.onscroll = $.debounce(doAnimate, 100);
 }
 
 animateScroll();
