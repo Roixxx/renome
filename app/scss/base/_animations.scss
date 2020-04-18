@@ -2,8 +2,6 @@
   animation-duration: 1s;
 }
 
-
-
 .animate.duration-1s {
   animation-duration: 1s;
 }
@@ -28,16 +26,11 @@
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translate3d(0, 10%, 0);
+      	transform: translate3d(0%, 30%, 0);
     }
     to {
         opacity: 1;
-
     }
-}
-
-.fadeInUp {
-    animation-name: fadeInUp;
 }
 
 @keyframes fade {
@@ -50,6 +43,40 @@
     }
 }
 
+@keyframes fadeInRightUp {
+	from {
+		opacity: 0;
+      	transform: translate3d(10%, 30%, 0);
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInLeftUp {
+	from {
+		opacity: 0;
+      	transform: translate3d(-10%, 30%, 0);
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
 .fade {
-    animation-name: fade;
+  animation-name: fade;
+}
+
+.fadeInRightUp {
+	animation-name: fadeInRightUp;
+}
+
+.fadeInLeftUp {
+	animation-name: fadeInLeftUp;
 }

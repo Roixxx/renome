@@ -44,6 +44,8 @@ function lunchSlider() {
                 slide.classList.add('current-slide');
             }
 
+            if (slidesArr.length - 1 == i) slide.classList.add('last-slide');
+
             slide.style.width = width + 'px';
             slide.style.height = height + 'px';
             slide.style.opacity = opacity;
@@ -94,9 +96,9 @@ function animateScroll() {
 
     function doAnimate() {
         var scrolled = window.pageYOffset + document.documentElement.clientHeight;
-        console.log('вызвана функция');
+  
         animateArr.forEach(element => {
-            if (scrolled - 300> element.offsetTop) {
+            if (scrolled - 200> element.offsetTop) {
                 element.style.visibility = 'visible';
                 element.style.animationPlayState = 'running';
             };
