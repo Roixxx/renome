@@ -57,7 +57,8 @@
 .lunch-slider-track__item {
     width: 600px;
     height: 400px;
-    transition: width 0.3s, height 0.3s;
+    transition: width 0.1s, height 0.1s;
+
 
     @include media((
         width: (830: 500px, 720: 400px, phoneWide: 300px, 375: 260px),
@@ -68,6 +69,7 @@
     &.current-slide,
     &.last-slide {
         transition: transform 0.5s, opacity 0.1s;
+        
     }
 
     img {

@@ -44,7 +44,8 @@ function lunchSlider() {
                 slide.classList.add('current-slide');
             }
 
-            if (slidesArr.length - 1 == i) slide.classList.add('last-slide');
+            (slidesArr.length - 1 == i) ? slide.classList.add('last-slide') : slide.classList.remove('last-slide');
+            
 
             slide.style.width = width + 'px';
             slide.style.height = height + 'px';
@@ -95,10 +96,9 @@ function animateScroll() {
     });
 
     function doAnimate() {
-        var scrolled = window.pageYOffset + document.documentElement.clientHeight;
-  
+
         animateArr.forEach(element => {
-            if (scrolled - 200> element.offsetTop) {
+            if (200 > element.getBoundingClientRect().top - document.documentElement.clientHeight) {
                 element.style.visibility = 'visible';
                 element.style.animationPlayState = 'running';
             };
@@ -110,3 +110,4 @@ function animateScroll() {
 
 animateScroll();
 
+console.log(document.body.querySelector('.lunch-slider-track__item').getBoundingClientRect());
