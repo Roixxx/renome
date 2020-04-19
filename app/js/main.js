@@ -98,7 +98,8 @@ function animateScroll() {
     function doAnimate() {
 
         animateArr.forEach(element => {
-            if (200 > element.getBoundingClientRect().top - document.documentElement.clientHeight) {
+            if (200 >  element.getBoundingClientRect().top - document.documentElement.clientHeight) {
+
                 element.style.visibility = 'visible';
                 element.style.animationPlayState = 'running';
             };
@@ -109,5 +110,3 @@ function animateScroll() {
 }
 
 animateScroll();
-
-console.log(document.body.querySelector('.lunch-slider-track__item').getBoundingClientRect());

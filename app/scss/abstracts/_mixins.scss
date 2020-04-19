@@ -2,7 +2,11 @@
 //https://github.com/Dolgik89/-media-screen
 //https://habr.com/ru/post/352686/
 
-/* () */
+/* 
+@include media((
+    padding: (tablet: 0 50px, phone: 0 30px),
+));
+ */
 
 $breakpoints: (
     "smallPhone":   320,

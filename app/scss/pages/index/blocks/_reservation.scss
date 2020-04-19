@@ -1,0 +1,29 @@
+.section-reservation {
+    .section-text-side-holder {
+        margin-left: 80px;
+
+        @include media((
+            margin-left: (tabletWide: 50px, tablet: 25px, phone: 0px),
+            max-width: (smallPhone-921: 100%)
+        ));
+    }
+
+    .section-content-holder {
+        flex-wrap: wrap;
+    }
+
+    .section-images-side-holder {
+        margin-top: -75px;
+        padding-left: 47px;
+    }
+
+    img:first-child {
+        transform: translate(-47px, 75px);
+    }
+
+    .section-title {
+        @include media((
+            font-size: (phoneWide: 30px),
+        ));
+    }
+}
