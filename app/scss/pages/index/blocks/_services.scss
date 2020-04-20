@@ -18,8 +18,10 @@
         display: flex;
         justify-content: center;
        
-        height: 275px;
         background-color: #f7f7f7;
+        @include media((
+            flex-direction: (phoneWide: column),
+        ));
 
         &__item {
             color: #1e2633;
@@ -31,13 +33,22 @@
             padding: 0px 70px;
             display: flex;
             align-items: center;
-
+            height: 275px;
+            width: 100%;
+        
             @include media((
-                padding: (tablet: 0 50px, phone: 0 30px),
+                padding: (tablet: 0 50px, tabletSmall: 0 40px, phablet: 0 30px, phoneWide: 0 20px, phone: 0, smallPhone: 0),
+                height: (phablet: 200px, phoneWide: 150px, phone: 150px, smallPhone: 120px),
+                
             ));
 
             p {
                 text-align: center;
+                margin: 0 auto;
+
+                @include media((
+                    margin (phoneWide: 0 auto),
+                ));
             }
 
         
@@ -46,6 +57,13 @@
         &__item:not(:first-child):not(:last-child) {
             border-right: 1px solid #d9d9d9;
             border-left: 1px solid #d9d9d9;
+            
+            @include media((
+                border-right: (phoneWide: none),
+                border-left: (phoneWide: none),
+                border-top: (phoneWide: 1px solid #d9d9d9),
+                border-bottom: (phoneWide: 1px solid #d9d9d9),
+            ));
         }
     }
 }

@@ -111,7 +111,8 @@ li {list-style: none;}
     margin-left: -2px;
     line-height: 1.25;
     @include media((
-        margin-top: (tablet: 0)
+        margin-top: (tablet: 0),
+        font-size: (phablet: 35px, phoneWide: 30px, phone: 25px, smallPhone: 0),
     ));
 }
 

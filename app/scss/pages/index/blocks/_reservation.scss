@@ -1,4 +1,7 @@
 .section-reservation {
+    padding-top: 25px;
+
+
     .section-text-side-holder {
         margin-left: 80px;
 
@@ -13,7 +16,6 @@
     }
 
     .section-images-side-holder {
-        margin-top: -75px;
         padding-left: 47px;
     }
 
@@ -21,9 +23,4 @@
         transform: translate(-47px, 75px);
     }
 
-    .section-title {
-        @include media((
-            font-size: (phoneWide: 30px),
-        ));
-    }
 }
