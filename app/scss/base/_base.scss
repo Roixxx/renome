@@ -87,6 +87,7 @@ li {list-style: none;}
     flex-direction: column;
     max-width: 336px;
     width: 100%;
+    margin-top: 30px;
 }
 
 .section-images-side-holder {
@@ -107,11 +108,9 @@ li {list-style: none;}
     font-size: 50px;
     font-weight: $font-regular;
     letter-spacing: 10px;
-    margin-top: 40px;
     margin-left: -2px;
     line-height: 1.25;
     @include media((
-        margin-top: (tablet: 0),
         font-size: (phablet: 35px, phoneWide: 30px, phone: 25px, smallPhone: 0),
     ));
 }

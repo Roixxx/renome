@@ -1,9 +1,10 @@
 .section-reservation {
-    padding-top: 25px;
 
+    padding-bottom: 0px;
 
     .section-text-side-holder {
         margin-left: 80px;
+
 
         @include media((
             margin-left: (tabletWide: 50px, tablet: 25px, phone: 0px),
@@ -20,7 +21,12 @@
     }
 
     img:first-child {
-        transform: translate(-47px, 75px);
+        transform: translate(-47px, 0);
+        z-index: 10;
+    }
+    img:last-child {
+        transform: translate(0, -75px);
+        margin-bottom: -75px;
     }
 
 }
