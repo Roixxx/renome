@@ -1,7 +1,12 @@
 .section-blog {
     padding-top: 90px;
     padding-bottom: 0px;
-    background: linear-gradient(to top, #f7f7f7 40%, transparent 50%);
+    background: linear-gradient(to top, #f7f7f7 40%, transparent 1%);
+
+
+    .section-title {
+        margin-right: -0.2em;
+    }
 
     &__top {
         display: flex;
@@ -12,6 +17,7 @@
 
         h3 {
             margin: 0;
+            margin-bottom: 15px;
         }
     }
 
@@ -84,6 +90,11 @@
         text-transform: uppercase;
         letter-spacing: 3px;
         line-height: 1;
+        transition: color .3s;
+
+        &:hover {
+            color: #985e5b;
+        }
     }
 }
 
