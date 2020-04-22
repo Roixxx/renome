@@ -1,4 +1,21 @@
 
+// FIXED HEADER \/
+
+$(document).ready(function() {
+ 
+    if ($(this).scrollTop() > 1){
+        $('.menu-holder').addClass("sticky");
+    }
+    else {
+        $('.menu-holder').removeClass("sticky");
+    }
+}); 
+
+
+
+
+// HEADER SLIDER \/
+
 $(document).ready(function(){
     $('.h-slider').slick({
         slidesToShow: 1,
@@ -98,15 +115,24 @@ function animateScroll() {
     function doAnimate() {
 
         animateArr.forEach(element => {
-            if (200 >  element.getBoundingClientRect().top - document.documentElement.clientHeight) {
+            if (100 > element.getBoundingClientRect().top - document.documentElement.clientHeight) {
 
+                console.log(document.documentElement.clientHeight + ' document.documentElement.clientHeight');
+                console.log(element.getBoundingClientRect().top + ' getBoundingClientRect().top');
+                console.log(' ');
                 element.style.visibility = 'visible';
                 element.style.animationPlayState = 'running';
             };
         });
     }
 
-    window.onscroll = $.debounce(doAnimate, 100);
+
+    window.addEventListener('scroll', function() {
+       $.debounce(doAnimate(), 100);
+    });
 }
 
+
+
 animateScroll();
+

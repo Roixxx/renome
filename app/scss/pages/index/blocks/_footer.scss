@@ -25,4 +25,33 @@
         letter-spacing: 2px;
         text-transform: none;
     }
+
+    &__links-list {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin-right: 16px;
+        }
+    }
+
+    &__link {
+        width: 33px;
+        height: 33px;
+        border: 2px solid $primary-color;
+        background-color: #edeff2;
+        border-radius: 50%;
+        transition: background-color 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: #b1b9c7;
+        }
+    }
+
+    &__link:not(:last-child) {
+        margin-right: 10px;
+    }
 }
