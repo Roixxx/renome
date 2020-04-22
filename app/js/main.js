@@ -1,19 +1,4 @@
 
-// FIXED HEADER \/
-
-$(document).ready(function() {
- 
-    if ($(this).scrollTop() > 1){
-        $('.menu-holder').addClass("sticky");
-    }
-    else {
-        $('.menu-holder').removeClass("sticky");
-    }
-}); 
-
-
-
-
 // HEADER SLIDER \/
 
 $(document).ready(function(){
@@ -100,39 +85,48 @@ function lunchSlider() {
 lunchSlider();
 
 
+
 // Animate Scroll \/
 
-function animateScroll() {
 
+var animateArr = Array.from( document.querySelectorAll('.animate') );
 
-    var animateArr = Array.from( document.querySelectorAll('.animate') );
+animateArr.forEach(element => {
+    element.style.animationPlayState = 'paused';
+    element.style.visibility = 'hidden';
+});
+
+function doAnimate() {
 
     animateArr.forEach(element => {
-        element.style.animationPlayState = 'paused';
-        element.style.visibility = 'hidden';
-    });
+        if (100 > element.getBoundingClientRect().top - document.documentElement.clientHeight) {
 
-    function doAnimate() {
-
-        animateArr.forEach(element => {
-            if (100 > element.getBoundingClientRect().top - document.documentElement.clientHeight) {
-
-                console.log(document.documentElement.clientHeight + ' document.documentElement.clientHeight');
-                console.log(element.getBoundingClientRect().top + ' getBoundingClientRect().top');
-                console.log(' ');
-                element.style.visibility = 'visible';
-                element.style.animationPlayState = 'running';
-            };
-        });
-    }
-
-
-    window.addEventListener('scroll', function() {
-       $.debounce(doAnimate(), 100);
+            element.style.visibility = 'visible';
+            element.style.animationPlayState = 'running';
+        };
     });
 }
 
 
+window.addEventListener('scroll', function() {
+    $.debounce(doAnimate(), 100);
 
-animateScroll();
+    $.debounce(fixHeader(), 50000);
+});
 
+
+
+
+// Fix header \/
+
+function fixHeader() {
+    $(document).ready(function() {
+        console.log($(window).scrollTop());
+        if ($(window).scrollTop() > 1){
+            $('.menu-holder').addClass("sticky");
+        }
+        else {
+            $('.menu-holder').removeClass("sticky");
+        }
+    }); 
+}
