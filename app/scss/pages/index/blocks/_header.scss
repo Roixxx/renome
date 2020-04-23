@@ -40,6 +40,7 @@
     nav {
         display: flex;
         flex-wrap: wrap;
+        background-color: white;
     }
 
     &__item a {
@@ -151,8 +152,134 @@
     }
 }
 
+// BURGER MENU 
+// BURGER MENU 
+// BURGER MENU 
+
+.menu-box {
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  background: #3faf82;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+}
+
+.menu-btn {
+  position: absolute;
+    top: 14px;
+    right: 0px;;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  cursor: pointer;
+}
+
+span {
+  display: block;
+  width: 100%;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+  border-radius: 3px;
+  height: 4px;
+  background: black;
+  transition: all .3s;
+  position: relative;
+}
+
+span + span {
+  margin-top: 8px;
+}
+
+.active span:nth-child(1) {
+  animation: ease .7s top forwards;
+}
+
+.not-active span:nth-child(1) {
+  animation: ease .7s top-2 forwards;
+}
+
+.active span:nth-child(2) {
+  animation: ease .7s scaled forwards;
+  margin-top: 9px;
+}
+
+.not-active span:nth-child(2) {
+  animation: ease .7s scaled-2 forwards;
+}
+
+.active span:nth-child(3) {
+  animation: ease .7s bottom forwards;
+  margin-top: 26px;
+}
+
+.not-active span:nth-child(3) {
+  animation: ease .7s bottom-2 forwards;
+}
+
+
+
+#header .menu-opened {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    
+
+    .container {
+        padding: 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        transition: all 0.3s;
+    }
+
+    .menu nav {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0px 14px 14px 0 rgba(50,50,50,.75);
+        transition: all 0.3s;
+    }
+
+    .menu__list {
+        flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+        transition: all 0.3s;
+    }
+
+    .menu__item {
+        padding: 5px 0;
+        font-size: 30px;
+        transition: all 0.3s;
+
+        a {
+            height: 45px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s;
+        }
+    }
+
+    .menu__item:not(:last-child) {
+        border-bottom: 1px solid black;
+    }
+}
+// END OF BURGER MENU 
+
+
 @media (max-width: 800px) {
     .menu nav {
         display: none;
+    }
+    .menu-holder {
+
+    &.sticky {
+        height: 50px;
+
+    }
+    &.sticky .menu{
+        height: 50px;
     }
 }

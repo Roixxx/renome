@@ -107,20 +107,16 @@ function doAnimate() {
     });
 }
 
-
 window.addEventListener('scroll', function() {
     $.debounce(doAnimate(), 100);
     fixHeader();
 });
 
-
-
-
 // Fix header \/
 
 function fixHeader() {
     $(document).ready(function() {
-        if ($(window).scrollTop() > 100){
+        if ($(window).scrollTop() > 50){
             $('.menu-holder').addClass("sticky");
         }
         else {
@@ -128,3 +124,11 @@ function fixHeader() {
         }
     }); 
 }
+
+// Burger menu \/
+var menuBtn = $('.menu-btn');
+menuBtn.on('click', function() {
+  $(this).toggleClass('active');
+  $(this).toggleClass('not-active');
+  $('.menu-holder').toggleClass('menu-opened');
+});
