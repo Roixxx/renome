@@ -28,7 +28,7 @@
 }
 
 @media (max-width: 850px) {
-    .section-menu {
+    .section-contact {
         .section-content-holder {
             flex-direction: column-reverse;
             align-items: center;
@@ -49,6 +49,20 @@
 
         .section-text-side-holder {
             margin-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .section-contact {
+
+        .section-images-side-holder {
+            padding-left: 50px;
+            padding-bottom: 30px;
+        }
+
+        .section-img:last-child {
+            transform: translate(-50px,-70px);
         }
     }
 }

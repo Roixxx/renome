@@ -55,3 +55,13 @@
         margin-right: 10px;
     }
 }
+
+@media (max-width: 660px) {
+    .footer__holder {
+        flex-direction: column;
+
+        p {
+            padding: 15px 0;
+        }
+    }
+}
