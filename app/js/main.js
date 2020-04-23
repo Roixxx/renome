@@ -110,8 +110,7 @@ function doAnimate() {
 
 window.addEventListener('scroll', function() {
     $.debounce(doAnimate(), 100);
-
-    $.debounce(fixHeader(), 50000);
+    fixHeader();
 });
 
 
@@ -121,8 +120,7 @@ window.addEventListener('scroll', function() {
 
 function fixHeader() {
     $(document).ready(function() {
-        console.log($(window).scrollTop());
-        if ($(window).scrollTop() > 1){
+        if ($(window).scrollTop() > 100){
             $('.menu-holder').addClass("sticky");
         }
         else {

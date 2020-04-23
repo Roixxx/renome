@@ -3,8 +3,20 @@
     z-index: 100;
     width: 100%;
     background-color: white;
+    transition: height 0.5s, border 0.3s, box-shadow 0.3s;
+
+    &.sticky {
+        height: 50px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0px 1px 16px 0px rgba(50, 50, 50, 0.75);
+    }
+    &.sticky .menu{
+        height: 50px;
+    }
     
 }
+
 
 .menu {
     z-index: 100;
@@ -12,6 +24,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: height 0.5s;
 
     &__title {
         cursor: pointer;
@@ -138,5 +151,8 @@
     }
 }
 
-
-
+@media (max-width: 800px) {
+    .menu nav {
+        display: none;
+    }
+}
