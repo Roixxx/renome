@@ -110,10 +110,9 @@
 
     &__promo {
         position: absolute;
-        bottom: 100px;
-        right: 17%;
+        bottom: 16vh;
+        right: 15vh;
 
-        margin: 0px 5px;
         color: $white-color;
         font-family: $secondary-font;
         font-size: 50px;
@@ -121,6 +120,7 @@
         letter-spacing: 5px;
         z-index: 20;
         line-height: 1.2;
+
         &--mod {
             color: #985e5b;
             font-family: $primary-font;
@@ -130,19 +130,21 @@
         }
 
         @include media((
-            right: (tabletWide: 2%, tablet: 3%, phone: 1%),
+            //right: (tabletWide: 2%, tablet: 3%, phone: 1%),
             font-size: (tablet: 30px),
-            bottom: (tablet: 230px),
+            bottom: (tablet: 15vh, tabletSmall: 27vh),
+            right: (tablet: 5vh, 396: 0),
+            left: (396: 5vh),
         ));
     }
 
     .slick-arrow {
         position: absolute;
-        left: 20%;
-        bottom: 120px;
+        left: 20vh;
+        bottom: 15vh;
         
         @include media((
-            left: (tabletWide: 15%, tablet: 10%, phoneWide: 5%)
+            left: (tabletWide: 15vh, tablet: 10vh, phoneWide: 5vh)
         ));
     }
 
