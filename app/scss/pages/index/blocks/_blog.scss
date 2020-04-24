@@ -26,6 +26,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         padding-bottom: 50px;
+        margin: 0 -10px;
     }
 
     &__blog-item {
@@ -42,14 +43,6 @@
             height: (phone: 290px),
             margin-bottom: (phone: 25px),
         ));
-
-        &:first-child {
-            margin-left: 0;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        } 
     }
 
     &__blog-info {
