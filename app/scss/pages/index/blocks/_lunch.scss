@@ -144,6 +144,15 @@
     background-color: #edeff2;
     border: 2px solid #edeff2;
     position: absolute;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: rgba(74, 76, 80, 0.31);
+    }
+
+    &:active {
+        background-color: #ffffff;
+    }
 
     @include media((
         width: (phoneWide: 40px),

@@ -98,14 +98,16 @@ animateArr.forEach(element => {
 
 function doAnimate() {
 
+    var scrolled = window.pageYOffset + document.documentElement.clientHeight;
+
     animateArr.forEach(element => {
-        if (100 > element.getBoundingClientRect().top - document.documentElement.clientHeight) {
+        if (scrolled - 150 > element.getBoundingClientRect().top + window.pageYOffset) {
 
             element.style.visibility = 'visible';
             element.style.animationPlayState = 'running';
         };
     });
-}
+}doAnimate();
 
 window.addEventListener('scroll', function() {
     $.debounce(doAnimate(), 100);
