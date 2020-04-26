@@ -1,0 +1,33 @@
+.section-about {
+    padding-bottom: 35px;
+
+    .section-content-holder {
+        flex-wrap: wrap;
+    }
+
+
+    img:last-child {
+        transform: translate(-47px, -65px);
+    }
+
+    .section-images-side-holder {
+        padding-left: 47px;
+    }
+
+    .section-text-side-holder {
+        margin-left: 100px;
+
+        @include media((
+            margin-left: (tabletWide: 50px, tablet: 25px, phone: 0px),
+            max-width: (smallPhone-921: 100%)
+        ));
+    }
+
+    .section-title {
+        margin-left: -0.05em;
+    }
+
+    .section-text:last-child {
+        margin-top: 30px;
+    }
+}
