@@ -88,6 +88,9 @@ li {list-style: none;}
     max-width: 336px;
     width: 100%;
     margin-top: 30px;
+    @include media((
+        margin-top: (tabletSmall: 25px, phablet: 20px, phoneWide: 15px, phone: 0px),
+    ));
 }
 
 .section-images-side-holder {
@@ -110,7 +113,7 @@ li {list-style: none;}
     letter-spacing: 0.2em;
     line-height: 1.25;
     @include media((
-        font-size: (phablet: 35px, phoneWide: 30px, phone: 25px, smallPhone: 0),
+        font-size: (phablet: 35px, phoneWide: 30px, phone: 25px),
     ));
 }
 
