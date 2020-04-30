@@ -102,15 +102,12 @@ const scripts = () =>
   gulp
     .src(paths.scripts.src)
     .pipe(plumber())
-    .pipe(sourcemaps.init())
     .pipe(
       babel({
         presets: ['@babel/preset-env']
       })
     )
     .pipe(terser())
-    .pipe(concat('app.min.js'))
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.scripts.dest));
 
 // Minify all javascript libs and concat them into a single jslibs.min.js
@@ -118,7 +115,6 @@ const jslibs = () =>
   gulp
     .src(paths.jslibs.src)
     .pipe(plumber())
-    .pipe(sourcemaps.init())
     .pipe(
       babel({
         presets: ['@babel/preset-env']
@@ -126,7 +122,6 @@ const jslibs = () =>
     )
     .pipe(terser())
     .pipe(concat('jslibs.min.js'))
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.jslibs.dest));
 
 // Copy and minify images
