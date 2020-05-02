@@ -13,6 +13,8 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 20px;
         box-shadow: 0px 1px 16px 0px rgba(50, 50, 50, 0.75);
+        background-color: white;
+        color: black;
     }
     &.sticky .menu{
         height: 50px;
@@ -47,6 +49,10 @@
         color: $secondary-color;
     }
 
+    .sticky &__title{
+        color: black;
+    }
+
     &__list,
     nav {
         display: flex;
@@ -70,6 +76,11 @@
     .page-index &__item a {
         color: $secondary-color;
     }
+    
+    .sticky &__item a {
+        color: black;
+    }
+
 
     &__icon {
         color: $secondary-color;
@@ -338,11 +349,11 @@ span + span {
 
 
     img:last-child {
-        transform: translate(-47px, -65px);
+        transform: translate(-60px, -65px);
     }
 
     .section-images-side-holder {
-        padding-left: 47px;
+        padding-left: 60px;
         margin-bottom: -65px;
     }
 
