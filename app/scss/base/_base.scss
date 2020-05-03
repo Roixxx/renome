@@ -106,8 +106,6 @@ li {list-style: none;}
         letter-spacing: 0.1em;
         z-index: 20;
         line-height: 1.2;
-        position: absolute;
-        top: 0;
         z-index: 10;
     }
 
@@ -117,12 +115,16 @@ li {list-style: none;}
         letter-spacing: 1.2px;
         font-family: Montserrat,sans-serif;
         font-size: 30px;
-        position: absolute;
-        bottom: 0;
         z-index: 10;
         
     }
-    
+}
+
+@media (max-height: 630px) {
+    .intro,
+    .intro::after {
+        height: 500px;
+    }
 }
 
 
