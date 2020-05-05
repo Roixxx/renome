@@ -167,20 +167,23 @@
     }
 
     &__modal-close {
-        position: absolute;
+        position: absolute !important;
         z-index: 1000;
-        right: 0px;
-        top: 0px;
+        right: -5px;
+        top: -40px;
         width: 32px;
         height: 32px;
         opacity: 1;
+        cursor: pointer;
+        transition: opacity .3s;
     }
     &__modal-close:hover {
         opacity: 0.8;
     }
     &__modal-close:before, &__modal-close:after {
         position: absolute;
-        left: 15px;
+        z-index: 1000;
+        right: 15px;
         content: '';
         height: 33px;
         width: 2px;
@@ -192,6 +195,28 @@
     &__modal-close:after {
         transform: rotate(-45deg);
     }
+
+    &__modal-next {
+        position: absolute;
+        top: 50%;
+        right: -10%;
+    }
+    &__modal-prev {
+        position: absolute;
+        top: 50%;
+        left: -10%;
+    }
+    &__modal-next svg,
+    &__modal-prev svg {
+        fill: #ffffff;
+        transition: fill 0.3s;
+    }
+
+    &__modal-next:hover svg,
+    &__modal-prev:hover svg {
+        fill: #bebebe;
+    }
+
 
 }
 
