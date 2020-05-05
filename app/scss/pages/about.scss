@@ -1,3 +1,7 @@
+.no-scroll {
+   overflow-y: hidden; 
+}
+
 .page-about {
 
     .section-about {
@@ -73,8 +77,16 @@
             height: 100%;
         }
 
+        &__img-link {
+            z-index: 10;
+        }
+
         &__img-holder {
             position: relative;
+
+            a {
+                display: block;
+            }
 
         }
 
@@ -130,6 +142,57 @@
             letter-spacing: 1.4px;
         }
     }
+}
+
+.gallery {
+    &__modal-holder {
+        z-index: 100;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        position: fixed;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        
+        div {
+            position: relative;
+        }
+    }
+
+    &__modal {
+        background-color: white;
+    }
+
+    &__modal-close {
+        position: absolute;
+        z-index: 1000;
+        right: 0px;
+        top: 0px;
+        width: 32px;
+        height: 32px;
+        opacity: 1;
+    }
+    &__modal-close:hover {
+        opacity: 0.8;
+    }
+    &__modal-close:before, &__modal-close:after {
+        position: absolute;
+        left: 15px;
+        content: '';
+        height: 33px;
+        width: 2px;
+        background-color: white;
+    }
+    &__modal-close:before {
+        transform: rotate(45deg);
+    }
+    &__modal-close:after {
+        transform: rotate(-45deg);
+    }
+
 }
 
 @media (max-width: 1080px) {
