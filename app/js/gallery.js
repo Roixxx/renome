@@ -22,9 +22,26 @@ document.addEventListener('click', function(event) {
     }
 });
 
+document.onkeydown = function (e) { 
+    if (!document.querySelector('.gallery-opened')) return false;
+    
+    if (e.code == 'ArrowRight') {
+        e.dataset = {dir: 'next'};
+        slideImg(e);
+    }
+    if (e.code == 'ArrowLeft') {
+        e.dataset = {dir: 'prev'};
+        slideImg(e);
+    }
+}
+
+
 
 let galleryModalHolder = document.querySelector('.gallery__modal-holder');
 let galleryModal = document.querySelector('.gallery__modal');
+
+
+
 
 function doFullImg(link) {
     body.classList.toggle('no-scroll');
@@ -36,6 +53,7 @@ function closeModal() {
     body.classList.toggle('no-scroll');
     galleryModalHolder.style.display = "none";
     galleryModal.innerHTML = "";
+    document.querySelector('.gallery-opened').classList.remove('gallery-opened');
 }
 
 function slideImg(target) {
@@ -56,6 +74,7 @@ function slideImg(target) {
     }
 
     if (target.dataset.dir == 'next') {
+
         if (opendImg.nextElementSibling) {
 
             let nextImg = opendImg.nextElementSibling.firstElementChild;
