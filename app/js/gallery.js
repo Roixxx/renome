@@ -1,3 +1,7 @@
+const galleryModalHolder = document.querySelector('.gallery__modal-holder');
+const galleryModal = document.querySelector('.gallery__modal');
+
+
 
 
 document.addEventListener('click', function(event) {
@@ -18,6 +22,7 @@ document.addEventListener('click', function(event) {
     if (target.classList.contains('gallery__img-link')) {
 
         target.parentElement.classList.toggle('gallery-opened');
+        galleryModalHolder.classList.add('animate');
         doFullImg(target);
     }
 });
@@ -37,12 +42,6 @@ document.onkeydown = function (e) {
 
 
 
-let galleryModalHolder = document.querySelector('.gallery__modal-holder');
-let galleryModal = document.querySelector('.gallery__modal');
-
-
-
-
 function doFullImg(link) {
     body.classList.toggle('no-scroll');
     galleryModalHolder.style.display = "flex";
@@ -50,10 +49,13 @@ function doFullImg(link) {
 }
 
 function closeModal() {
+    //galleryModalHolder.classList.add('fade-reverse');
     body.classList.toggle('no-scroll');
-    galleryModalHolder.style.display = "none";
     galleryModal.innerHTML = "";
     document.querySelector('.gallery-opened').classList.remove('gallery-opened');
+    galleryModalHolder.style.display = "none";
+   
+    
 }
 
 function slideImg(target) {
