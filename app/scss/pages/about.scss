@@ -163,9 +163,18 @@
         left: 0;
         background-color: rgba(0, 0, 0, 0.85);
         position: fixed;
-        display: none;
+        display: flex;
         justify-content: center;
         align-items: center;
+
+        transition: all .5s ease;
+        opacity: 0;
+        visibility: hidden;
+
+        &.open {
+            opacity: 1;
+            visibility: visible;
+        }
         
         div {
             position: relative;

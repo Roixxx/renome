@@ -22,7 +22,7 @@ document.addEventListener('click', function(event) {
     if (target.classList.contains('gallery__img-link')) {
 
         target.parentElement.classList.toggle('gallery-opened');
-        galleryModalHolder.classList.add('animate');
+        
         doFullImg(target);
     }
 });
@@ -44,18 +44,16 @@ document.onkeydown = function (e) {
 
 function doFullImg(link) {
     body.classList.toggle('no-scroll');
-    galleryModalHolder.style.display = "flex";
+    galleryModalHolder.classList.add('open');
     galleryModal.innerHTML = `<img src="${link}" alt="fullImg">`;
 }
 
 function closeModal() {
-    //galleryModalHolder.classList.add('fade-reverse');
+
     body.classList.toggle('no-scroll');
     galleryModal.innerHTML = "";
     document.querySelector('.gallery-opened').classList.remove('gallery-opened');
-    galleryModalHolder.style.display = "none";
-   
-    
+    galleryModalHolder.classList.remove('open');
 }
 
 function slideImg(target) {
