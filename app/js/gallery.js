@@ -3,21 +3,18 @@ const galleryModal = document.querySelector('.gallery__modal');
 
 
 
-
 document.addEventListener('click', function(event) {
     event.preventDefault();
-    //console.log(event.target);
+    
+    let target = event.target;
 
-    if (event.target.classList.contains('gallery__modal-close')) {
-        closeModal();
+    if (target.classList.contains('gallery__modal-close')) closeModal();
+
+    if (target.closest('.gallery__modal-arrow')) {
+        slideImg(target.closest('.gallery__modal-arrow'));
     }
 
-    if (event.target.closest('.gallery__modal-arrow')) {
-        slideImg(event.target.closest('.gallery__modal-arrow'));
-    }
-
-
-    let target = event.target.firstElementChild;
+    target = event.target.firstElementChild;
     if (!target) return;
     if (target.classList.contains('gallery__img-link')) {
 
@@ -58,8 +55,6 @@ function closeModal() {
 
 function slideImg(target) {
     let opendImg = document.querySelector('.gallery-opened');
-
-    console.log(target);
 
     if (target.dataset.dir == 'prev') {
         
