@@ -45,7 +45,7 @@ document.onkeydown = function (e) {
 function doFullImg(link) {
     body.classList.toggle('no-scroll');
     galleryModalHolder.classList.add('open');
-    galleryModal.innerHTML = `<img src="${link}" alt="fullImg">`;
+    galleryModal.innerHTML = `<img src="${link}" alt="fullImg" class="animate fade">`;
 }
 
 function closeModal() {
@@ -69,7 +69,7 @@ function slideImg(target) {
 
             opendImg.classList.remove('gallery-opened');
             prevImg.parentElement.classList.add('gallery-opened');
-            galleryModal.innerHTML = `<img src="${prevImg.href}" alt="fullImg">`;
+            galleryModal.innerHTML = `<img src="${prevImg.href}" alt="fullImg" class="animate fade">`;
         }
     }
 
@@ -81,7 +81,7 @@ function slideImg(target) {
 
             opendImg.classList.remove('gallery-opened');
             nextImg.parentElement.classList.add('gallery-opened');
-            galleryModal.innerHTML = `<img src="${nextImg.href}" alt="fullImg">`;
+            galleryModal.innerHTML = `<img src="${nextImg.href}" alt="fullImg" class="animate fade">`;
         } 
     }
 }
