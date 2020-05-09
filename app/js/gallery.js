@@ -20,7 +20,7 @@ document.addEventListener('click', function(event) {
 
         target.parentElement.classList.toggle('gallery-opened');
         
-        doFullImg(target);
+        openImg(target);
     }
 });
 
@@ -37,12 +37,11 @@ document.onkeydown = function (e) {
     }
 }
 
+function openImg(link) {
 
-
-function doFullImg(link) {
     body.classList.toggle('no-scroll');
     galleryModalHolder.classList.add('open');
-    galleryModal.innerHTML = `<img src="${link}" alt="fullImg" class="animate fade">`;
+    dofullImg(link);
 }
 
 function closeModal() {
@@ -54,29 +53,26 @@ function closeModal() {
 }
 
 function slideImg(target) {
+    
     let opendImg = document.querySelector('.gallery-opened');
+    opendImg.classList.remove('gallery-opened');
 
-    if (target.dataset.dir == 'prev') {
-        
-        if (opendImg.previousElementSibling) {
+    let targetImg;
 
-            let prevImg = opendImg.previousElementSibling.firstElementChild;
+    if (target.dataset.dir == 'prev' && opendImg.previousElementSibling) {
 
-            opendImg.classList.remove('gallery-opened');
-            prevImg.parentElement.classList.add('gallery-opened');
-            galleryModal.innerHTML = `<img src="${prevImg.href}" alt="fullImg" class="animate fade">`;
-        }
+        targetImg = opendImg.previousElementSibling.firstElementChild;
+    } 
+
+    if (target.dataset.dir == 'next' && opendImg.nextElementSibling) {
+
+        targetImg = opendImg.nextElementSibling.firstElementChild;
     }
 
-    if (target.dataset.dir == 'next') {
+    targetImg.parentElement.classList.add('gallery-opened');
+    dofullImg(targetImg.href);
+}
 
-        if (opendImg.nextElementSibling) {
-
-            let nextImg = opendImg.nextElementSibling.firstElementChild;
-
-            opendImg.classList.remove('gallery-opened');
-            nextImg.parentElement.classList.add('gallery-opened');
-            galleryModal.innerHTML = `<img src="${nextImg.href}" alt="fullImg" class="animate fade">`;
-        } 
-    }
+function dofullImg(src) {
+    galleryModal.innerHTML = `<img src="${src}" alt="fullImg" class="animate fade">`;
 }
