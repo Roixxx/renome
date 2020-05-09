@@ -80,3 +80,5 @@ function slideImg(target) {
         } 
     }
 }
+
+//s faf
