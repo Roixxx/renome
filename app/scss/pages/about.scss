@@ -180,9 +180,6 @@
             position: relative;
         }
     }
-    @for $i from 1 through 10 {
-        .gallery__img-holder:nth-child(#{$i}) { animation-delay: $i / 2 + s; }
-    }
 
     &__modal {
         background-color: white;
@@ -230,16 +227,13 @@
         top: 0;
         display: flex;
         align-items: center;
-        width: 50%;
-        justify-content: center;
-        z-index: 1000;
     }
 
     &__modal-next {
-        right: -30%;
+        right: -10%;
     }
     &__modal-prev {
-        left: -30%;
+        left: -10%;
     }
     &__modal-next svg,
     &__modal-prev svg {
@@ -251,8 +245,9 @@
     &__modal-prev:hover svg {
         fill: #bebebe;
     }
-}
 
+
+}
 
 @media (max-width: 1080px) {
     .section-gallery .gallery {
@@ -278,16 +273,24 @@
     }
 
     .gallery .gallery__img-holder {
-
-        &::after {
-            background-image: url('/assets/images/about/zoom.png');
-            background-repeat: no-repeat;
-            background-position: center;
+        &:nth-child(1) {
+            z-index: 6;
         }
-    }
-
-    @for $i from 1 through 10 {
-        .gallery .gallery__img-holder:nth-child(#{$i}) { z-index: 10 - $i; }
+        &:nth-child(2) {
+            z-index: 5;
+        }
+        &:nth-child(3) {
+            z-index: 4;
+        }
+        &:nth-child(4) {
+            z-index: 3;
+        }
+        &:nth-child(5) {
+            z-index: 2;
+        }
+        &:nth-child(6) {
+            z-index: 1;
+        }
     }
 
 
