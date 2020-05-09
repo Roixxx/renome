@@ -71,6 +71,7 @@ function slideImg(target) {
     if (target.dataset.dir == 'next') {
 
         if (opendImg.nextElementSibling) {
+<<<<<<< HEAD
 
             let nextImg = opendImg.nextElementSibling.firstElementChild;
 
@@ -82,3 +83,14 @@ function slideImg(target) {
 }
 
 //s faf
+=======
+
+            let nextImg = opendImg.nextElementSibling.firstElementChild;
+
+            opendImg.classList.remove('gallery-opened');
+            nextImg.parentElement.classList.add('gallery-opened');
+            galleryModal.innerHTML = `<img src="${nextImg.href}" alt="fullImg" class="animate fade">`;
+        } 
+    }
+}
+>>>>>>> parent of 252118d... Update gallery.js
