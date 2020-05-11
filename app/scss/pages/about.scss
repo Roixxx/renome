@@ -181,7 +181,7 @@
         }
     }
     @for $i from 1 through 10 {
-        .gallery__img-holder:nth-child(#{$i}) { animation-delay: $i / 2 + s; }
+        .gallery__img-holder:nth-child(#{$i}) { animation-delay: $i / 3.5 + s; }
     }
 
     &__modal {
