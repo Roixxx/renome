@@ -44,7 +44,7 @@ function fixHeader() {
 // Burger menu \/
 var menuBtn = $('.menu-btn');
 menuBtn.on('click', function() {
-  $(this).toggleClass('active');
-  $(this).toggleClass('not-active');
-  $('.menu-holder').toggleClass('menu-opened');
+    $(this).toggleClass('active');
+    $(this).toggleClass('not-active');
+    $('.menu-holder').toggleClass('menu-opened');
 });
