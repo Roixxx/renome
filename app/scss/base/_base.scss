@@ -208,3 +208,24 @@ li {list-style: none;}
     margin-top: 13px;
     
 }
+
+.draw-border {
+  @include btn-border-drawing(#959191, #985e5b, 4px, bottom, right);
+}
+
+//=== Button styling, semi-ignore
+.link-to-page {
+    margin-top: 10px;
+    width: 250px;
+    text-align: center;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font: 700 1.2rem 'Monsterrat', sans-serif;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
+    
+    &:focus { outline: 2px dotted #55d7dc; }
+}
