@@ -1,0 +1,75 @@
+.tab-menu {
+
+    &__links-holder {
+        border-bottom: 1px solid #ebebeb;
+        margin-bottom: 33px;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        max-width: 562px;
+        margin: 0 auto;
+    }
+
+    &__link {
+        color: $primary-color;
+        font-family: $primary-font;
+        font-size: 12px;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+        transition: color .3s, border-bottom .3s;
+        padding-bottom: 18px;
+        border-bottom: 2px solid transparent;
+
+        &:hover,
+        &.active {
+            color: #985e5b;
+            border-bottom: 2px solid #985e5b;
+        }
+    }
+
+    &__dish-type {
+        display: inline-block;
+        color: $primary-color;
+        font-size: 22px;
+        font-weight: $font-medium-well;
+        line-height: 24px;
+        font-style: italic;
+        margin: 77px 0px 53px 140px;
+        @include media((
+            margin: (phone: 77px auto 53px auto),
+        ));
+    }
+
+    &__dish-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+
+    }
+
+    &__dish-name {
+        color: $primary-color;
+        font-family: $primary-font;
+        font-size: 14px;
+        font-weight: $font-bold;
+        line-height: 24px;
+        letter-spacing: 0.7px;
+    }
+
+    &__dish-desc {
+        max-width: 768px;
+        color: $paragraph-color;
+        font-family: $primary-font;
+        font-size: 12px;
+        font-weight: $font-medium-well;
+        line-height: 24px;
+        letter-spacing: 1.8px;
+    }
+
+
+}

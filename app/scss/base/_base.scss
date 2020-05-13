@@ -156,7 +156,7 @@ li {list-style: none;}
 .section-text-side-holder {
     display: flex;
     flex-direction: column;
-    max-width: 336px;
+    max-width: 340px;
     width: 100%;
     margin-top: 30px;
     @include media((
@@ -202,7 +202,7 @@ li {list-style: none;}
     color: $paragraph-color;
     font-family: $primary-font;
     font-size: 12px;
-    font-weight: $font-medium;
+    font-weight: $font-medium-well;
     line-height: 30px;
     letter-spacing: 1.8px;
     margin-top: 13px;
