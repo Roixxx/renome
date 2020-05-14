@@ -39,7 +39,9 @@
         font-style: italic;
         margin: 77px 0px 53px 140px;
         @include media((
-            margin: (phone: 77px auto 53px auto),
+            margin: (phone: 20px auto 53px auto),
+            width: (phone: 100%),
+            text-align: (phone: center),
         ));
     }
 
@@ -49,7 +51,24 @@
     }
 
     &__item {
+        display: flex;
+        margin-bottom: 47px;
+    }
 
+    &__img {
+        display: block;
+        margin-right: 53px;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        object-fit: cover;
+        @include media((
+            margin-right: (phone: 30px),
+        ));
+    }
+
+    &__info-holder {
+        margin-top: 10px;
     }
 
     &__dish-name {
@@ -69,7 +88,41 @@
         font-weight: $font-medium-well;
         line-height: 24px;
         letter-spacing: 1.8px;
+        margin-right: 10px;
     }
 
+    &__price {
 
+        color: #dcdee0;
+        color: $primary-color;
+        font-size: 25px;
+        font-weight: $font-medium-well;
+        line-height: 20px;
+        letter-spacing: 1.25px;
+        margin-top: 26px;
+        margin-left: auto;
+
+        span {
+            color: #dcdee0;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .tab-menu {
+        &__img {
+            width: 70px;
+            height: 70px;
+        }
+
+        &__price {
+            position: absolute;
+            top: calc(70px + 20px);
+            margin: 0;
+        }
+
+        &__item {
+            position: relative;
+        }
+    }
 }
