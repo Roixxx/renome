@@ -55,6 +55,10 @@
         margin-bottom: 47px;
     }
 
+    &__item:last-child {
+        margin-bottom: 0px;
+    }
+
     &__img {
         display: block;
         margin-right: 53px;
