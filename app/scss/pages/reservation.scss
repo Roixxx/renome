@@ -1,0 +1,58 @@
+.page-reservation {
+    .section-text-side-holder {
+        max-width: 405px;
+        
+    }
+
+    .reservation-form {
+
+        &__title {
+            color: $primary-color;
+            font-family: $primary-font;
+            font-size: 20px;
+            font-weight: $font-bold;
+            line-height: 0;
+            text-transform: uppercase;
+            letter-spacing: 1.7px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        &__holder {
+            max-width: 690px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__submit {
+            margin: 0 auto;
+            width: 180px;
+            display: block;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: $primary-color;
+            border: 0;
+
+            color: $white-color;
+            font-family: $primary-font;
+            font-size: 11px;
+            font-weight: $font-bold;
+            text-transform: uppercase;
+            letter-spacing: 1.65px;
+            transition: background-color .3s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #985e5b;
+            }
+        }
+    }
+
+
+    .form {
+        margin: 0 auto;
+        margin-top: 100px;
+        width: 100%;
+    }
+}
