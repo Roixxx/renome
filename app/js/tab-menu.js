@@ -25,3 +25,5 @@ function doTab(target) {
         }
     });
 }
+
+document.getElementById("defaultOpen").click();

@@ -13,7 +13,7 @@
 	<!--<script async src="https://kit.fontawesome.com/683568747e.js" crossorigin="anonymous"></script>!-->
 </head>
 
-<body id="body" class="page-about">
+<body id="body" class="page-tab-menu">
 	<header class="header" id="header">
 		<div class="menu-holder">
 			<div class="container">
@@ -76,15 +76,53 @@
 		<div class="tab-menu__links-holder">
 			<div class="tab-menu__links">
 				<a href="#" class="tab-menu__link" data-tab-menu-section="breakfast">breakfast</a>
-				<a href="#" class="tab-menu__link" data-tab-menu-section="lunch">lunch</a>
+				<a href="#" class="tab-menu__link" id="defaultOpen" data-tab-menu-section="lunch">lunch</a>
 				<a href="#" class="tab-menu__link" data-tab-menu-section="drinks">drinks</a>
 				<a href="#" class="tab-menu__link" data-tab-menu-section="desserts">desserts</a>
 			</div>
 		</div>
 		<div class="container">
-			<div class="tab-menu__section" data-tab-menu-section="breakfast">breakfast</div>
+			<div class="tab-menu__section animate fade" data-tab-menu-section="breakfast">
+				<div>
+					<p class="tab-menu__dish-type">Breakfast</p>
+					<ul class="tab-menu__dish-list">
+						<li class="tab-menu__item">
+							<img class="tab-menu__img" src="./assets/images/menu/dish-1.png" alt="">
+							<div class="tab-menu__info-holder">
+								<p class="tab-menu__dish-name">Eggs</p>
+								<p class="tab-menu__dish-desc">It’s all about flavour and fun, fun, fun. Toss fried chicken with a finger-licking sauce spiked with chilli and fresh ginger.</p>
+							</div>
+							<div class="tab-menu__price">$4<span>.95</span></div>
+						</li>
+						<li class="tab-menu__item">
+							<img class="tab-menu__img" src="./assets/images/menu/dish-2.png" alt="">
+							<div class="tab-menu__info-holder">
+								<p class="tab-menu__dish-name">Porridge</p>
+								<p class="tab-menu__dish-desc">It’s all about flavour and fun, fun, fun. Toss fried chicken with a finger-licking sauce spiked with chilli and fresh ginger.</p>
+							</div>
+							<div class="tab-menu__price">$3<span>.95</span></div>
+						</li>
+						<li class="tab-menu__item">
+							<img class="tab-menu__img" src="./assets/images/menu/dish-3.png" alt="">
+							<div class="tab-menu__info-holder">
+								<p class="tab-menu__dish-name">Chicken wings</p>
+								<p class="tab-menu__dish-desc">It’s all about flavour and fun, fun, fun. Toss fried chicken with a finger-licking sauce spiked with chilli and fresh ginger.</p>
+							</div>
+							<div class="tab-menu__price">$4<span>.95</span></div>
+						</li>
+						<li class="tab-menu__item">
+							<img class="tab-menu__img" src="./assets/images/menu/dish-4.png" alt="">
+							<div class="tab-menu__info-holder">
+								<p class="tab-menu__dish-name">omelette</p>
+								<p class="tab-menu__dish-desc">It’s all about flavour and fun, fun, fun. Toss fried chicken with a finger-licking sauce spiked with chilli and fresh ginger.</p>
+							</div>
+							<div class="tab-menu__price">$3<span>.95</span></div>
+						</li>
+					</ul>
+				</div>
+			</div>
 
-			<div class="tab-menu__section" data-tab-menu-section="lunch">
+			<div class="tab-menu__section animate fade" data-tab-menu-section="lunch">
 				<div>
 					<p class="tab-menu__dish-type">Appetizers</p>
 					<ul class="tab-menu__dish-list">
@@ -229,6 +267,61 @@
 								<p class="tab-menu__dish-desc">It’s all about flavour and fun, fun, fun. Toss fried chicken with a finger-licking sauce spiked with chilli and fresh ginger.</p>
 							</div>
 							<div class="tab-menu__price">$9<span>.95</span></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab-menu__section animate fade" data-tab-menu-section="drinks">
+				<div>
+					<p class="tab-menu__dish-type">Drinks</p>
+					<ul class="tab-menu__dish-list">
+						<li class="tab-menu__item">
+							<img class="tab-menu__img" src="./assets/images/menu/cola.jpg" alt="">
+							<div class="tab-menu__info-holder">
+								<p class="tab-menu__dish-name">Coca-Cola®</p>
+								<p class="tab-menu__dish-desc">Coca-Cola®, a cold and refreshing complement to all of our menu items.</p>
+							</div>
+							<div class="tab-menu__price">$0<span>.95</span></div>
+						</li>
+						<li class="tab-menu__item">
+							<img class="tab-menu__img" src="./assets/images/menu/tea.jpg" alt="">
+							<div class="tab-menu__info-holder">
+								<p class="tab-menu__dish-name">Iced Tea</p>
+								<p class="tab-menu__dish-desc">freshly brewed with a brisk blend of orange pekoe and pekoe cut black tea, served ice cold.</p>
+							</div>
+							<div class="tab-menu__price">$0<span>.95</span></div>
+						</li>
+						<li class="tab-menu__item">
+							<img class="tab-menu__img" src="./assets/images/menu/water.jpg" alt="">
+							<div class="tab-menu__info-holder">
+								<p class="tab-menu__dish-name">DASANI® Water</p>
+								<p class="tab-menu__dish-desc">DASANI is purified water enhanced with minerals for a pure, fresh taste.</p>
+							</div>
+							<div class="tab-menu__price">$0<span>.45</span></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab-menu__section animate fade" data-tab-menu-section="desserts">
+				<div>
+					<p class="tab-menu__dish-type">Desserts</p>
+					<ul class="tab-menu__dish-list">
+						<li class="tab-menu__item">
+							<img class="tab-menu__img" src="./assets/images/menu/cookie.jpg" alt="">
+							<div class="tab-menu__info-holder">
+								<p class="tab-menu__dish-name">Chocolate Chip Cookie</p>
+								<p class="tab-menu__dish-desc">Our classic chocolate chip cookie, loaded with chocolate chips and baked to soft, warm perfection.
+								</p>
+							</div>
+							<div class="tab-menu__price">$0<span>.65</span></div>
+						</li>
+						<li class="tab-menu__item">
+							<img class="tab-menu__img" src="./assets/images/menu/cone.jpg" alt="">
+							<div class="tab-menu__info-holder">
+								<p class="tab-menu__dish-name">Vanilla Cone</p>
+								<p class="tab-menu__dish-desc">Enjoy a treat made with sweet, creamy vanilla soft serve in a crispy cone.</p>
+							</div>
+							<div class="tab-menu__price">$0<span>.75</span></div>
 						</li>
 					</ul>
 				</div>

@@ -1,4 +1,14 @@
+.page-tab-menu {
+    .section-menu {
+        padding-bottom: 20px;
+    }
+}
+
 .tab-menu {
+
+    &__section {
+        display: none;
+    }
 
     &__links-holder {
         border-bottom: 1px solid #ebebeb;
@@ -39,7 +49,7 @@
         font-style: italic;
         margin: 77px 0px 53px 140px;
         @include media((
-            margin: (phone: 20px auto 53px auto),
+            margin: (phone: 53px auto 20px auto),
             width: (phone: 100%),
             text-align: (phone: center),
         ));
