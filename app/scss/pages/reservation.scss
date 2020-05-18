@@ -54,5 +54,48 @@
         margin: 0 auto;
         margin-top: 100px;
         width: 100%;
+
+        &__item-holder {
+            background-repeat: no-repeat;
+            background-position-y: center;
+            padding-left: 40px;
+
+            &.calendar {
+                background-image: url('/assets/images/reservation/calendar.png');
+            }
+            &.time {
+                background-image: url('/assets/images/reservation/hours.png');
+            }
+            &.people {
+                background-image: url('/assets/images/reservation/people.png');
+            }
+        }
+
+        &__item {
+            display: block;
+            
+            cursor: pointer;
+            width: 160px;
+            padding: 7px 0;
+            border: none;
+            border-bottom: 3px solid #f5f7fa;
+            font-size: 15px;
+            font-weight: $font-bold;
+            font-family: $primary-font;
+            transition: color .3s, border-bottom-color .3s;
+
+            &:hover {
+                color: #985e5b;
+                border-bottom-color: #985e5b;
+            }
+
+        }
+
+        option {
+            font-size: 14px;
+            font-weight: $font-medium-well;
+            color: $primary-color;
+
+        }
     }
 }

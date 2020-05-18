@@ -78,28 +78,32 @@
             <form action="#" class="form">
 
                 <div class="reservation-form__holder"">
-                    <input type="date" name="date" required>
-
-                    <select name="time" required>
-                        <option>12:00 PM</option>
-                        <option>12:00 PM</option>
-                        <option>12:00 PM</option>
-                        <option>12:00 PM</option>
-                        <option>12:00 PM</option>
-                        <option>12:00 PM</option>
-                        <option>12:00 PM</option>
-                    </select>
-
-                    <select name="people" required>
-                        <option>1 person</option>
-                        <option>2 people</option>
-                        <option>3 people</option>
-                        <option>4 people</option>
-                        <option>5 people</option>
-                        <option>6 people</option>
-                        <option>7 people</option>
-                        <option>8 people</option>
-                    </select>
+					<div class="form__item-holder calendar">
+                    	<input class="form__item" type="date" name="date" required>
+					</div>
+					<div class="form__item-holder time">
+						<select class="form__item" name="time" required>
+							<option>12:00 PM</option>
+							<option>12:30 PM</option>
+							<option>1:00 PM</option>
+							<option>2:00 PM</option>
+							<option>3:00 PM</option>
+							<option>4:00 PM</option>
+							<option>5:00 PM</option>
+						</select>
+					</div>
+					<div class="form__item-holder people">
+						<select class="form__item" name="people" required>
+							<option>1 person</option>
+							<option>2 people</option>
+							<option>3 people</option>
+							<option>4 people</option>
+							<option>5 people</option>
+							<option>6 people</option>
+							<option>7 people</option>
+							<option>8 people</option>
+						</select>
+					</div>
                 </div>
                 <button class="reservation-form__submit" type="submit">Find a Table</button>
             </form>
