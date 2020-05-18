@@ -83,13 +83,22 @@
             font-weight: $font-bold;
             font-family: $primary-font;
             transition: color .3s, border-bottom-color .3s;
+            appearance: none !important;
+            background: url('/assets/images/reservation/down.png') no-repeat;
+            background-position: center right;
+
 
             &:hover {
                 color: #985e5b;
                 border-bottom-color: #985e5b;
             }
-
         }
+
+        &__item[type="date"]:hover,
+        &__item[type="date"]:focus {
+            background-image: none;
+        }
+
 
         option {
             font-size: 14px;
@@ -98,4 +107,21 @@
 
         }
     }
+}
+
+@media (max-width: 705px) {
+    .reservation-form__holder {
+        flex-direction: column;
+    }
+
+    .form__item-holder  {
+        margin: 20px auto;
+    }
+}
+@media (max-width: 400px) {
+    .intro__caption {
+        font-size: 40px;
+    }
+
+   
 }

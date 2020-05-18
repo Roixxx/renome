@@ -79,7 +79,7 @@
 
                 <div class="reservation-form__holder"">
 					<div class="form__item-holder calendar">
-                    	<input class="form__item" type="date" name="date" required>
+                    	<input class="form__item date-input" value="2015-05-09" type="date" min="2000-01-01" max="2100-01.01" name="date" required>
 					</div>
 					<div class="form__item-holder time">
 						<select class="form__item" name="time" required>
@@ -133,6 +133,21 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="assets/js/jslibs.min.js?cb=123"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		const dateInput = document.querySelector('.date-input');
+		const date = new Date();
+		const day = date.getDate();
+		const month = twoDigits( date.getMonth() + 1) ;
+		const year = date.getFullYear();
+
+		dateInput.value = `${year}-${month}-${day}`;
+		dateInput.max = dateInput.value + 360;
+		dateInput.min = dateInput.value;
+
+		function twoDigits(num) {
+  			return ('0' + num).slice(-2);
+		}
+	</script>
 </body>
 
 </html>
