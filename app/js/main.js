@@ -48,3 +48,9 @@ menuBtn.on('click', function() {
     $(this).toggleClass('not-active');
     $('.menu-holder').toggleClass('menu-opened');
 });
+
+// warning \/
+
+function warning() {
+    alert('Sorry, but the service does not work, because this is a demo site.');
+}
