@@ -3,8 +3,6 @@
 }
 
 .blog {
-
-
     display: flex;
     justify-content: space-between;
 
@@ -12,22 +10,86 @@
         max-width: 700px;
         width: 59.33%;
 
-
-
-
-        height: 1000px;
         border: 1px solid blue;
     }
-
     &__bar-side {
         max-width: 385px;
         width: 34.43%;
 
-
-
-
-        height: 1000px;
         border: 1px solid yellow;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item:not(last-child) {
+        margin-bottom: 90px;
+    }
+    &__title-holder {
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    &__category {
+        color: #985e5b;
+        font-family: $secondary-font;
+        font-size: 12px;
+        font-weight: $font-regular;
+        letter-spacing: 2.4px;
+        margin-top: 5px;
+    }
+    &__title {
+        color: $primary-color;
+        font-family: $primary-font;
+        font-size: 30px;
+        font-weight: $font-medium-well;
+        letter-spacing: 3px;
+        margin: 15px 0;
+    }
+    &__date {
+        color: #bbbdbf;
+        font-family: $primary-font;
+        font-size: 12px;
+        font-weight: $font-bold;
+        letter-spacing: 1.2px;
+        margin-bottom: 25px;
+    }
+    &__img {
+        max-width: 700px;
+        height: auto;
+        display: block;
+    }
+    &__text {
+        color: $paragraph-color;
+        font-family: $primary-font;
+        font-size: 12px;
+        font-weight: $font-medium-well;
+        line-height: 30px;
+        letter-spacing: 1.6px;
+        text-transform: none;
+        align-self: start;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        max-width: 677px;
+    }
+    &__link {
+        text-transform: none;
+        color: #985e5b;
+        font-family: $primary-font;
+        font-size: 12px;
+        font-weight: $font-bold;
+        line-height: 30px;
+        letter-spacing: 1.8px;
+        align-self: start;
+        &:hover {
+            color:#2d2e39;
+        }
+    }
+
+    &__page-navigation {
+        border-top: 1px solid #f2f2f2;
+        width: 100%;
     }
 }
