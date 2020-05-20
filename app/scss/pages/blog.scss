@@ -1,5 +1,6 @@
 .section-main-blog {
     padding-top: 90px;
+    padding-bottom: 0px;
 }
 
 .blog {
@@ -10,13 +11,13 @@
         max-width: 700px;
         width: 59.33%;
 
-        border: 1px solid blue;
+        //border: 1px solid blue;
     }
     &__bar-side {
         max-width: 385px;
         width: 34.43%;
 
-        border: 1px solid yellow;
+        //border: 1px solid yellow;
     }
     &__item {
         display: flex;
@@ -88,8 +89,103 @@
         }
     }
 
-    &__page-navigation {
+    &__pager-navigation {
         border-top: 1px solid #f2f2f2;
         width: 100%;
+
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
     }
+    &__pager-list {
+        display: flex;
+
+        a {
+            display: block;
+            padding: 10px 20px;
+            color: $primary-color;
+            font-family: $primary-font;
+            font-size: 15px;
+            font-weight: $font-bold;
+            line-height: 30px;
+            text-transform: uppercase;
+            transition: color .3s;
+            &:hover {
+                color: #985e5b;
+            }
+        }
+    }
+    &__prev {
+        padding-left: 6px;
+        border-right: 1px solid #f2f2f2;
+    }
+    &__next {
+        padding-left: 30px;
+        border-left: 1px solid #f2f2f2;
+    }
+    &__arrow {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        svg {
+            transition: fill .3s;
+        }
+
+        &:hover svg {
+            fill: #985e5b;
+        }
+    }
+}
+
+.blog {
+    form {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__search {
+        width: 100%;
+        padding: 12px 0;
+        border: none;
+        border-bottom: 3px solid #f5f7fa;
+        color: $paragraph-color;
+        font-family: $primary-font;
+        font-size: 14px;
+        font-weight: $font-medium;
+        line-height: 25px;
+        transition: border-bottom-color .3s;
+
+        &:focus {
+            outline: none;
+            border-bottom-color: #a77673;
+        }
+       
+        &::-webkit-input-placeholder {color:#bbbdbf;}
+        &::-moz-placeholder          {color:#bbbdbf;}
+        &:-moz-placeholder           {color:#bbbdbf;}
+        &:-ms-input-placeholder      {color:#bbbdbf;}
+    }
+
+    &__searsh-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 9px 0px 12px 20px;
+        border-bottom: 3px solid #f5f7fa;
+        transition: fill .3s, border-bottom-color .3s;
+
+        svg {
+            height: 13px;
+            width: 13px;
+        }
+
+        &:hover {
+            fill: #a77673;
+            border-bottom-color: #a77673;
+        }
+    }
+
 }
