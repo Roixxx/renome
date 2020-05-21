@@ -71,8 +71,8 @@
                             <h2 class="blog__title">our salad are award winning</h2>
                             <p class="blog__date">APril 25, 2015</p>
 							<div class="blog__video">
-								<video class="blog__video video-box" controls poster="./assets/images/blog/blog1.jpg">
-									<source src="./assets/images/blog/test.webm" type="video/webm">
+								<video class="blog__video video-box" poster="./assets/images/blog/blog1.jpg">
+									<source src="http://e14aaeb709f7cde1ae68-a1d0a134a31b545b257b15f8a8ba5726.r70.cf3.rackcdn.com/projects/31432/1427815464209-bf74131a7528d0ea5ce8c0710f530bb5/1280x720.mp4" type="video/webm">
 								</video>
 								<div class="blog__playpause"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20"><g opacity=".7"><path fill="#3c4042" d="M16 9.998L1.454 19.09v.195h-.311L0 20V0zm-2.91 0L1.455 2.38v15.238z"/><path fill="#fff" d="M16 9.998L1.454 19.09v.195h-.311L0 20V0zm-2.91 0L1.455 2.38v15.238z"/></g></svg></div>
 							</div>
@@ -197,15 +197,23 @@
 	<script src="assets/js/jslibs.min.js?cb=123"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
-		$('.video-box').parent().click(function () {
-			if ($(this).children(".video-box").get(0).paused) {
-				$(this).children(".video-box").get(0).play();   
-				$(this).children(".blog__playpause").fadeOut();
+		const video = document.body.querySelector('.video-box');
+		const playBtn = document.body.querySelector('.blog__playpause');
+
+		video.addEventListener('click', (e) => playVideo());
+		playBtn.addEventListener('click', (e) => {playVideo(); video.play()});
+
+		function playVideo() {
+			if (video.paused) {
+				video.setAttribute('controls', '');
+				video.paused = 'false';
+				playBtn.style.display = 'none';
 			} else {
-				$(this).children(".video-box").get(0).pause();
-				$(this).children(".blog__playpause").fadeIn();
+				video.paused = 'true';
+				playBtn.style.display = 'flex';
 			}
-		});
+		}
+		
 	</script>
 </body>
 
