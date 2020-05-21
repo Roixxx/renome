@@ -10,7 +10,7 @@
     &__blog-side {
         max-width: 700px;
         width: 59.33%;
-        }
+        
     }
     &__bar-side {
         max-width: 385px;
@@ -55,11 +55,32 @@
         letter-spacing: 1.2px;
         margin-bottom: 25px;
     }
-    &__img {
+    &__img,
+    &__video {
         max-width: 700px;
         width: 100%;
         height: auto;
         display: block;
+        position: relative;
+    }
+    &__video {
+        object-fit: cover;
+    }
+    &__playpause {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width:55px;
+        height:55px;
+        position:absolute;
+        border: 2px solid white;
+        left:0%;
+        right:0%;
+        top:0%;
+        bottom:0%;
+        margin:auto;
+
     }
     &__text {
         color: $paragraph-color;
@@ -142,6 +163,7 @@
         }
     }
 }
+
 
 .blog {
     form {

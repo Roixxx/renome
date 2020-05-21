@@ -70,7 +70,12 @@
                             <p class="blog__category">press</p>
                             <h2 class="blog__title">our salad are award winning</h2>
                             <p class="blog__date">APril 25, 2015</p>
-                            <img class="blog__img" src="./assets/images/blog/blog1.jpg" alt="blog-post">
+							<div class="blog__video">
+								<video class="blog__video video-box" controls poster="./assets/images/blog/blog1.jpg">
+									<source src="./assets/images/blog/test.webm" type="video/webm">
+								</video>
+								<div class="blog__playpause"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20"><g opacity=".7"><path fill="#3c4042" d="M16 9.998L1.454 19.09v.195h-.311L0 20V0zm-2.91 0L1.455 2.38v15.238z"/><path fill="#fff" d="M16 9.998L1.454 19.09v.195h-.311L0 20V0zm-2.91 0L1.455 2.38v15.238z"/></g></svg></div>
+							</div>
                             <p class="blog__text">Sed viverra bibendum sollicitudin. Praesent interdum porttitor elit molestie convallis. Integer sagittis vitae sem eget euismod. Etiam ut risus ac ligula hendrerit volutpat. Donec at consectetur leo, eu pretium estmauris</p>
                             <a class="blog__link" href="#">Continue Reading…</a>
                         </div>
@@ -191,6 +196,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="assets/js/jslibs.min.js?cb=123"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		$('.video-box').parent().click(function () {
+			if ($(this).children(".video-box").get(0).paused) {
+				$(this).children(".video-box").get(0).play();   
+				$(this).children(".blog__playpause").fadeOut();
+			} else {
+				$(this).children(".video-box").get(0).pause();
+				$(this).children(".blog__playpause").fadeIn();
+			}
+		});
+	</script>
 </body>
 
 </html>
