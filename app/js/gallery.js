@@ -4,7 +4,6 @@ const galleryModal = document.querySelector('.gallery__modal');
 
 document.addEventListener('click', function(event) {
     
-    
     let target = event.target;
 
     if (target.classList.contains('gallery__modal-close')) closeModal(event);
@@ -38,14 +37,12 @@ document.onkeydown = function (e) {
 
 function openImg(link) {
     
-
     body.classList.toggle('no-scroll');
     galleryModalHolder.classList.add('open');
     dofullImg(link);
 }
 
 function closeModal(e) {
-    
 
     body.classList.toggle('no-scroll');
     galleryModal.innerHTML = "";
@@ -56,21 +53,20 @@ function closeModal(e) {
 function slideImg(target) {
     
     let opendImg = document.querySelector('.gallery-opened');
-    
-
     let targetImg;
 
     if (target.dataset.dir == 'prev' && opendImg.previousElementSibling) {
         targetImg = opendImg.previousElementSibling.firstElementChild;
-        targetImg.parentElement.classList.add('gallery-opened');
-        opendImg.classList.remove('gallery-opened');
-    } 
 
-    if (target.dataset.dir == 'next' && opendImg.nextElementSibling) {
+    } else if (target.dataset.dir == 'next' && opendImg.nextElementSibling) {
         targetImg = opendImg.nextElementSibling.firstElementChild;
-        targetImg.parentElement.classList.add('gallery-opened');
-        opendImg.classList.remove('gallery-opened');
-    }
+        
+    } else {
+        return;
+    };
+
+    targetImg.parentElement.classList.add('gallery-opened');
+    opendImg.classList.remove('gallery-opened');
     dofullImg(targetImg.href);
 }
 
