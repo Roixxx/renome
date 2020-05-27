@@ -56,24 +56,24 @@ function closeModal(e) {
 function slideImg(target) {
     
     let opendImg = document.querySelector('.gallery-opened');
-    opendImg.classList.remove('gallery-opened');
+    
 
     let targetImg;
 
     if (target.dataset.dir == 'prev' && opendImg.previousElementSibling) {
-
         targetImg = opendImg.previousElementSibling.firstElementChild;
         targetImg.parentElement.classList.add('gallery-opened');
+        opendImg.classList.remove('gallery-opened');
     } 
 
     if (target.dataset.dir == 'next' && opendImg.nextElementSibling) {
-
         targetImg = opendImg.nextElementSibling.firstElementChild;
         targetImg.parentElement.classList.add('gallery-opened');
+        opendImg.classList.remove('gallery-opened');
     }
-
     dofullImg(targetImg.href);
 }
+
 
 function dofullImg(src) {
     galleryModal.innerHTML = `<img src="${src}" alt="fullImg" class="animate fade">`;
