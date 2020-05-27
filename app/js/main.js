@@ -3,7 +3,7 @@
 // Animate Scroll \/
 
 
-var animateArr = Array.from( document.querySelectorAll('.animate') );
+let animateArr = Array.from( document.querySelectorAll('.animate') );
 
 animateArr.forEach(element => {
     element.style.animationPlayState = 'paused';
@@ -12,7 +12,7 @@ animateArr.forEach(element => {
 
 function doAnimate() {
 
-    var scrolled = window.pageYOffset + document.documentElement.clientHeight;
+    let scrolled = window.pageYOffset + document.documentElement.clientHeight;
 
     animateArr.forEach(element => {
         if (scrolled - 150 > element.getBoundingClientRect().top + window.pageYOffset) {
@@ -23,7 +23,7 @@ function doAnimate() {
     });
 }doAnimate();
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function(e) {
     $.debounce(doAnimate(), 100);
     fixHeader();
 });
@@ -42,7 +42,7 @@ function fixHeader() {
 }
 
 // Burger menu \/
-var menuBtn = $('.menu-btn');
+let menuBtn = $('.menu-btn');
 menuBtn.on('click', function() {
     $(this).toggleClass('active');
     $(this).toggleClass('not-active');

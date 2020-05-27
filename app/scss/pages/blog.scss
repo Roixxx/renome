@@ -3,6 +3,13 @@
     padding-bottom: 0px;
 }
 
+.bar-fixed {
+    position: fixed;
+    top: 60px;
+    max-width: 385px;
+    width: 34.43%;
+}
+
 .blog {
     display: flex;
     justify-content: space-between;
@@ -65,6 +72,11 @@
     }
     &__video {
         object-fit: cover;
+        cursor: pointer;
+
+        &:hover .blog__playpause {
+            border: 3px solid white;
+        }
     }
     &__playpause {
         display: flex;
@@ -80,6 +92,7 @@
         top:0%;
         bottom:0%;
         margin:auto;
+        transition: border .3s;
 
     }
     &__text {
@@ -209,7 +222,7 @@
 
         &:hover {
             fill: #a77673;
-            border-bottom-color: #a77673;
+            
         }
     }
 
@@ -299,10 +312,13 @@
         align-items: center;   
 
         &__blog-side,
-        &__bar-side {
+        &__bar-side,
+        .bar-fixed {
             width: 100%;
+            position: static;
         } 
     }
+
 }
 
 @media (max-width: 405px) {
