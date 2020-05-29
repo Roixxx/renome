@@ -31,7 +31,7 @@
     &__item:not(last-child) {
         margin-bottom: 90px;
     }
-    &__title-holder {
+    &__content-holder {
         text-transform: uppercase;
         display: flex;
         flex-direction: column;
@@ -70,6 +70,9 @@
         display: block;
         position: relative;
     }
+    &__img {
+        margin-bottom: 20px;
+    }
     &__video {
         object-fit: cover;
         cursor: pointer;
@@ -104,9 +107,12 @@
         letter-spacing: 1.6px;
         text-transform: none;
         align-self: start;
-        margin-top: 40px;
+        margin-top: 20px;
         margin-bottom: 10px;
         max-width: 677px;
+    }
+    &__text:first-child {
+        margin-top: 40px;
     }
     &__link {
         text-transform: none;

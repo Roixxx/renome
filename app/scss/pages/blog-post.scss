@@ -1,0 +1,93 @@
+.blog {
+    &__subtitle {
+
+        color: $secondary-color;
+        font-family: $primary-font;
+        font-size: 15px;
+        font-weight: $font-bold;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        align-self: flex-start;
+        margin-top: 30px;
+
+    }
+
+    &__quote {
+
+        color: $secondary-color;
+        font-family: $primary-font;
+        font-size: 14px;
+        font-weight: $font-medium-well;
+        line-height: 30px;
+        letter-spacing: 2.1px;
+        text-transform: none;
+        margin: 20px 0 20px 0;
+        padding: 0 0 0 17px;
+        border-left: 3px solid #edeff2;
+    }
+
+    &__post-tags-holder {
+        display: flex; 
+        justify-content: space-between; 
+        width: 100%;
+    }
+
+    &__post-tags-list {
+        align-self: flex-start;
+        font-family: $primary-font;
+        font-size: 12px;
+        font-weight: $font-medium-well;
+        line-height: 30px;
+        text-transform: uppercase;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 7px;
+    }
+
+    &__post-tag-item {
+        color: #bbbdbf;
+        transition: color 0.3s;
+        margin-right: 30px;
+        &:hover {
+            color: #383838;
+        }
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    cursor: pointer;
+    font-weight: $font-medium-well;
+    background: url('/assets/images/blog/share-icon.png') no-repeat;
+    background-position: center right;
+    padding-right: 17px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f5f7fa;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.dropdown-content a {
+    color: $primary-color;
+    font-weight: $font-medium-well;
+    padding: 5px 25px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
