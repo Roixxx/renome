@@ -865,6 +865,11 @@
 
     .section-title {
         margin-right: -0.2em;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #99605d;
+        }
     }
 
     &__top {
@@ -932,6 +937,11 @@
         text-transform: uppercase;
         letter-spacing: 2.4px; 
         margin: 50px 0;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #99605d;
+        }
     }
 
     &__blog-read-more {
