@@ -1,4 +1,5 @@
 
+
 // Video
 const video = document.body.querySelector('.video-box');
 const playBtn = document.body.querySelector('.blog__playpause');
@@ -7,12 +8,11 @@ video.addEventListener('click', (e) => playVideo());
 playBtn.addEventListener('click', (e) => {playVideo(); video.play()});
 
 function playVideo() {
+
     if (video.paused) {
         video.setAttribute('controls', '');
-        video.paused = 'false';
         playBtn.style.display = 'none';
     } else {
-        video.paused = 'true';
         playBtn.style.display = 'flex';
     }
 }
