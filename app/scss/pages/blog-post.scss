@@ -1,5 +1,6 @@
 .blog {
-    &__subtitle {
+    &__subtitle,
+    .post-read-more__head {
 
         color: $secondary-color;
         font-family: $primary-font;
@@ -73,7 +74,7 @@
     position: absolute;
     right: 0;
     background-color: #f5f7fa;
-    min-width: 160px;
+   
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1000;
     padding: 20px 0;
@@ -82,7 +83,9 @@
 .dropdown-content a {
     color: $primary-color;
     font-weight: $font-medium-well;
-    padding: 5px 25px;
+    padding: 5px 0px;
+    padding-left: 27px;
+    padding-right: 27px;
     text-decoration: none;
     display: block;
 }
@@ -91,3 +94,74 @@
 
 .dropdown:hover .dropdown-content {display: block;}
 
+.blog {
+    &__author {
+        display: flex;
+        align-self: flex-start;
+        margin-top: 60px;
+    }
+
+    &__avatar {
+        width: 100px;
+        height: 100px;
+
+        object-fit: cover;
+    }
+
+    &__author-content {
+        margin-left: 25px;
+    }
+
+    &__author-name {
+        color: $secondary-color;
+        font-family: $primary-font;
+        font-size: 11px;
+        font-weight: $font-bold;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 2.2px;
+        margin-bottom: 10px;
+    }
+    &__author-text {
+        color: $primary-color;
+        font-family: $primary-font;
+        font-size: 11px;
+        font-weight: $font-medium-well;
+        line-height: 28px;
+        letter-spacing: 2.2px;
+        text-transform: none;
+    }
+
+    &__author-links-list {
+        display: flex;
+        align-items: center;
+        margin-left: -13px;
+
+        p {
+            margin-right: 16px;
+        }
+    }
+
+    &__author-link {
+        width: 33px;
+        height: 33px;
+
+
+        transition: background-color 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: #b1b9c7;
+        }
+    }
+
+    &__link:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__post-read-more {
+
+    }
+}
