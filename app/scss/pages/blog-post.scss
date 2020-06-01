@@ -1,7 +1,8 @@
 .blog {
     &__subtitle,
     .post-read-more__head,
-    &__comments-header {
+    .blog__comments-header,
+    .commnet-form__header {
 
         color: $secondary-color;
         font-family: $primary-font;
@@ -222,6 +223,12 @@
 }
 
 .blog {
+
+    &__comments {
+        border-bottom: 1px solid #edeff2;
+        padding-bottom: 100px;
+    }
+
     &__comment {
         display: flex;
         margin-top: 70px;
@@ -293,6 +300,44 @@
 
     &__comment-text {
         margin: 0;
+    }
+}
+
+.comment-form {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    input {
+        display: block;
+    }
+
+    textarea {
+        display: block;
+    }
+
+    &__submit {
+        margin: 0 auto;
+        width: 180px;
+        display: block;
+        margin-top: 50px;
+        padding: 20px;
+        background-color: $primary-color;
+        border: 0;
+
+        color: $white-color;
+        font-family: $primary-font;
+        font-size: 11px;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        letter-spacing: 1.65px;
+        transition: background-color .3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #985e5b;
+        }
     }
 }
 
