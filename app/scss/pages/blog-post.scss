@@ -2,7 +2,7 @@
     &__subtitle,
     .post-read-more__head,
     .blog__comments-header,
-    .commnet-form__header {
+    .comment-form__header {
 
         color: $secondary-color;
         font-family: $primary-font;
@@ -304,18 +304,64 @@
 }
 
 .comment-form {
+    &__header {
+        margin-top: 25px !important;
+        margin-bottom: 94px;
+    }
+
     &__top {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 62px;
+    }
+
+    label {
+        width: 100%;
+        color: $secondary-color;
+        font-family: $primary-font;
+        font-size: 12px;
+        font-weight: $font-bold;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        align-self: flex-start;
+    }
+
+    label:first-child {
+        margin-right: 50px;
     }
 
     input {
         display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 3px solid #f5f7fa;
+        transition: border-bottom-color .3s;
+        height: 30px;
+        padding: 5px;
+
+        &:focus {
+            outline: none;
+            border-bottom-color: #a77673;
+        }
     }
 
     textarea {
         display: block;
+        height: 30px;
+        width: 100%;
+        resize: none;
+        border: none;
+        border-bottom: 3px solid #f5f7fa;
+        padding: 5px;
+        overflow: hidden;
+
+        &:focus {
+            outline: none;
+            border-bottom-color: #a77673;
+        }
     }
+
 
     &__submit {
         margin: 0 auto;
@@ -340,6 +386,28 @@
         }
     }
 }
+
+.hiddendiv {
+    display: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* future version of deprecated 'word-wrap' */
+}
+
+.lbr {
+    line-height: 2px;
+}
+
+.common-texta {
+    max-width: 626px;
+    width: 100%;
+    min-height: 30px;
+    font-size: 15px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+
 
 @media (max-width: 500px) {
     .blog {
@@ -374,3 +442,4 @@
         text-align: center;
     }
 }
+

@@ -153,7 +153,7 @@
 							</div>
 						</div>
 						<div class="comment-form">
-							<p class="commnet-form__header">Leave a Reply</p>
+							<p class="comment-form__header">Leave a Reply</p>
 							<form action="#" method="POST">
 								<div class="comment-form__top">
 									<label>Name
@@ -163,8 +163,8 @@
 										<input type="text" name="name">
 									</label>
 								</div>
-								<label>message
-									<textarea name="message" cols="30" rows="10"></textarea>
+								<label class="comment-form__message">message
+									<textarea maxlength="1000" class="texta common-texta"></textarea>
 								</label>
 								<button class="comment-form__submit" onclick="warning(); return false" type="submit">post comment</button>
 							</form>
@@ -269,6 +269,7 @@
 	<script src="assets/js/jslibs.min.js?cb=123"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/blog.js"></script>
+	<script src="assets/js/textarea.js"></script>
 
 </body>
 
