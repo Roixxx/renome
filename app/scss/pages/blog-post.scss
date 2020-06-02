@@ -339,6 +339,7 @@
         transition: border-bottom-color .3s;
         height: 30px;
         padding: 5px;
+        font-weight: $font-medium-well;
 
         &:focus {
             outline: none;
@@ -355,6 +356,10 @@
         border-bottom: 3px solid #f5f7fa;
         padding: 5px;
         overflow: hidden;
+        font-weight: $font-medium-well;
+        color: $paragraph-color;
+        letter-spacing: 1.6px;
+        font-family: 'Montserrat',sans-serif;
 
         &:focus {
             outline: none;
@@ -391,7 +396,7 @@
     display: none;
     white-space: pre-wrap;
     word-wrap: break-word;
-    overflow-wrap: break-word; /* future version of deprecated 'word-wrap' */
+    overflow-wrap: break-word;
 }
 
 .lbr {
@@ -402,9 +407,13 @@
     max-width: 626px;
     width: 100%;
     min-height: 30px;
-    font-size: 15px;
+    font-size: 12px;
     overflow: hidden;
     padding: 5px;
+    font-weight: $font-medium-well;
+    color: $paragraph-color;
+    letter-spacing: 1.6px;
+    font-family: 'Montserrat',sans-serif;
 }
 
 
@@ -422,7 +431,8 @@
         }
 
         &__author-content {
-            margin-right: 0px;
+            margin: 0;
+            text-align: center;
         }
 
         &__author-links-list {
@@ -436,10 +446,51 @@
         &__comment-info {
             margin-left: 10px;
         }
+
+        &__post-tags-holder {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .post-read-more {
+        margin-top: 50px;
     }
 
     .post-read-more__head {
         text-align: center;
+        margin: 30px;
+    }
+
+    .post-read-more__item {
+        padding: 0;
+    }
+    .post-read-more__holder {
+        margin: 0;
+    }
+
+    .post-read-more__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .comment-form__top {
+        flex-direction: column;
+        margin-bottom: 0 !important;
+    }
+
+    .comment-form {
+        label {
+            margin-bottom: 20px;
+        }
+
+        &__top {
+            margin-bottom: 20px;
+        }
+
+        &__header {
+            margin: 35px 0;
+        }
     }
 }
 
