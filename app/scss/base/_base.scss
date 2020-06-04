@@ -217,20 +217,20 @@ li {list-style: none;}
 }
 
 .draw-border {
-  @include btn-border-drawing(#959191, #985e5b, 4px, bottom, right);
+  @include btn-border-drawing(#959191, #985e5b, 2px, bottom, right);
 }
 
 //=== Button styling, semi-ignore
 .link-to-page {
     margin-top: 10px;
-    width: 170px;
+    width: 150px;
     text-align: center;
     text-transform: uppercase;
     background: none;
     border: none;
     cursor: pointer;
     line-height: 1.5;
-    font: 700 18px 'Monsterrat', sans-serif;
+    font: 700 15px 'Monsterrat', sans-serif;
     padding: 13px 0px;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.01rem;
 }
