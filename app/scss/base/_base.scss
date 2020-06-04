@@ -37,6 +37,13 @@ li {list-style: none;}
     padding: 0 15px;
 }
 
+.hover {
+    transition: color .3s;
+    &:hover {
+        color: $tertiary-color;
+    }
+}
+
 .slick-arrow {
 	width: 55px;
 	height: 55px;
@@ -226,6 +233,4 @@ li {list-style: none;}
     font: 700 18px 'Monsterrat', sans-serif;
     padding: 13px 0px;
     letter-spacing: 0.05rem;
-    
-  
 }

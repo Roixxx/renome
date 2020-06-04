@@ -157,16 +157,16 @@
 							<form action="#" method="POST">
 								<div class="comment-form__top">
 									<label>Name
-										<input type="text" name="name">
+										<input required type="text" name="name">
 									</label>
 									<label>email
-										<input type="text" name="name">
+										<input required type="email" name="name">
 									</label>
 								</div>
 								<label class="comment-form__message">message
-									<textarea maxlength="1000" class="texta common-texta"></textarea>
+									<textarea required maxlength="1000" class="texta common-texta"></textarea>
 								</label>
-								<button class="comment-form__submit" onclick="warning(); return false" type="submit">post comment</button>
+								<button class="comment-form__submit" type="submit">post comment</button>
 							</form>
 						</div>
                     </div>
