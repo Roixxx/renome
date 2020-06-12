@@ -822,8 +822,9 @@
 .section-order {
     padding: 0;
     height: 200px;
-    background: url("../images/index/order/order-1.jpg") no-repeat;
-    background-position: center center;
+    background: transparent;
+    //background: url("../images/index/order/order-1.jpg") no-repeat;
+    //background-position: center center;
 
     .container {
         height: 100%;
