@@ -1,7 +1,8 @@
 
 
-// Animate Scroll \/
 
+
+// Animate Scroll \/
 
 let animateArr = Array.from( document.querySelectorAll('.animate') );
 
@@ -54,3 +55,4 @@ menuBtn.on('click', function() {
 function warning() {
     alert('Sorry, but the service does not work, because this is a demo site.');
 }
+
