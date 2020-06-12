@@ -1,0 +1,56 @@
+.contact {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1165px;
+
+
+    &-form {
+        border: 1px solid red;
+        width: 78.7%;
+        margin-right: 70px;
+    }
+
+    label:nth-child(odd) {
+        margin-right: 55px;
+    }
+
+
+    &__details {
+        border: 1px solid green;
+        max-width: 300px;
+        width: 21.65%;
+        
+    }
+
+}
+
+
+
+/*   .comment-form__top {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    label {
+        max-width: 390px;
+        width: 100%;
+        color: #000;
+        font-family: Montserrat,sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        align-self: flex-start;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+    }
+
+    label:nth-child(odd) {
+        margin-right: 55px;
+    }
+*/
