@@ -74,6 +74,10 @@
     max-width: 1720px;
     margin: 0 auto;
 
+    @include media((
+        padding-bottom: (desktop: 31%, tabletWide: 61%, tablet: 100%),
+    ));
+
     iframe {
         left:0;
         top:0;
@@ -87,6 +91,7 @@
 .contact__details {
     //border: 1px solid green;
     max-width: 300px;
+    min-width: 220px;
     width: 21.79%;
     letter-spacing: normal;
 
@@ -119,4 +124,39 @@
             }
         }
     }
+}
+
+@media (max-width: 780px) {
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .contact__details {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .comment-form__bottom {
+        flex-direction: column;
+    }
+
+    .comment-form__message {
+        margin-right: 0 !important;
+    }
+
+    .comment-form__submit {
+        margin: 0 auto !important;
+    }
+
 }
