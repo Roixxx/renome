@@ -1030,7 +1030,10 @@
         }
 
         .section-img:last-child {
-            transform: translate(-50px,-70px);
+            //transform: translate(-50px,-70px);
+            margin-top: -50px;
+            margin-left: -70px;
+            padding-left: 20px;
         }
     }
 }
