@@ -120,6 +120,10 @@
             color: #dcdee0;
         }
     }
+
+    &__btn {
+        background: url("./assets/images/menu/add-to-card.png") no-repeat;
+    }
 }
 
 @media (max-width: 550px) {
