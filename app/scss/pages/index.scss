@@ -1100,13 +1100,17 @@
     }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 820px) {
     .footer__holder {
         flex-direction: column;
 
         p {
             padding: 15px 0;
         }
+    }
+
+    .footer__copyright {
+        text-align: center;
     }
 }
 
