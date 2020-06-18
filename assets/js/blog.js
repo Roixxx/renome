@@ -1,0 +1,1 @@
+"use strict";var blogSideBarHolder=document.body.querySelector(".blog__bar-side-holder"),blog=document.body.querySelector(".blog");function fixSideBar(){blog.getBoundingClientRect().top<60?blogSideBarHolder.classList.add("bar-fixed"):blogSideBarHolder.classList.remove("bar-fixed")}window.addEventListener("scroll",(function(e){fixSideBar()}));
