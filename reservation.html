@@ -10,6 +10,7 @@
 	<title>Renome</title>
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="assets/css/styles.min.css?cb=1592460119338">
+	<link rel="stylesheet" href="assets/css/date-polyfill.css">
 	<!--<script async src="https://kit.fontawesome.com/683568747e.js" crossorigin="anonymous"></script>!-->
 </head>
 
@@ -77,11 +78,11 @@
 
                 <div class="reservation-form__holder">
 					<div class="form__item-holder calendar">
-                    	<input class="form__item date-input" value="2015-05-09" type="date" min="2000-01-01" max="2100-01.01" name="date" required>
+                    	<input class="form__item date-input" value="" type="date" min="2000-01-01" max="2100-01-01" name="date" required>
 					</div>
 					<div class="form__item-holder time">
 						<select class="form__item" name="time" required>
-							<option>12:00 PM</option>
+							<option value="">12:00 PM</option>
 							<option>12:30 PM</option>
 							<option>1:00 PM</option>
 							<option>2:00 PM</option>
@@ -92,7 +93,7 @@
 					</div>
 					<div class="form__item-holder people">
 						<select class="form__item" name="people" required>
-							<option>1 person</option>
+							<option value="">1 person</option>
 							<option>2 people</option>
 							<option>3 people</option>
 							<option>4 people</option>
@@ -127,8 +128,12 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+	<script src="assets/js/date-polyfill.js"></script>
 	<script src="assets/js/jslibs.min.js?cb=1592460119338"></script>
 	<script src="assets/js/main.js"></script>
+	
 	<script>
 		const dateInput = document.querySelector('.date-input');
 		const date = new Date();
